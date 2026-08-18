@@ -1,0 +1,15 @@
+{
+  "grape_black_measles": 0,
+  "grape_black_rot": 1,
+  "grape_healthy": 2,
+  "grape_isariopsis_leaf_spot": 3,
+  "tomato_bacterial_spot": 4,
+  "tomato_early_blight": 5,
+  "tomato_healthy": 6,
+  "tomato_late_blight": 7,
+  "tomato_leaf_mold": 8,
+  "tomato_septoria_leaf_spot": 9,
+  "tomato_spider_mites": 10,
+  "tomato_target_spot": 11,
+  "tomato_yellowleaf_curl_virus": 12
+}

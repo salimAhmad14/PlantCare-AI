@@ -1,0 +1,233 @@
+{
+ "built_by": "PlantCare_NB02_Kaggle_MilvusLite",
+ "vocabulary": "v2",
+ "section_types": [
+  "identity",
+  "overview",
+  "pathogen",
+  "transmission",
+  "symptom",
+  "prevention",
+  "treatment"
+ ],
+ "classes": [
+  "grape_black_measles",
+  "grape_black_rot",
+  "grape_healthy",
+  "grape_isariopsis_leaf_spot",
+  "tomato_bacterial_spot",
+  "tomato_early_blight",
+  "tomato_healthy",
+  "tomato_late_blight",
+  "tomato_leaf_mold",
+  "tomato_septoria_leaf_spot",
+  "tomato_spider_mites",
+  "tomato_target_spot",
+  "tomato_yellowleaf_curl_virus"
+ ],
+ "healthy_classes": [
+  "grape_healthy",
+  "tomato_healthy"
+ ],
+ "n_chunks": 172,
+ "n_documents": 11,
+ "documents": {
+  "Grape_Black_Measles_RAG_Document.pdf": "grape_black_measles",
+  "Grape_Black_Rot_RAG_Document.pdf": "grape_black_rot",
+  "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf": "grape_isariopsis_leaf_spot",
+  "Tomato_Bacterial_Spot_RAG.pdf": "tomato_bacterial_spot",
+  "Tomato_Early_Blight_RAG.pdf": "tomato_early_blight",
+  "Tomato_Late_Blight_RAG.pdf": "tomato_late_blight",
+  "Tomato_Leaf_Mold_RAG.pdf": "tomato_leaf_mold",
+  "Tomato_Septoria_Leaf_Spot_RAG.pdf": "tomato_septoria_leaf_spot",
+  "Tomato_Spider_Mites_RAG.pdf": "tomato_spider_mites",
+  "Tomato_Target_Spot_RAG.pdf": "tomato_target_spot",
+  "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf": "tomato_yellowleaf_curl_virus"
+ },
+ "coverage": {
+  "grape_black_measles": {
+   "chunks": 18,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "grape_black_rot": {
+   "chunks": 19,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "grape_healthy": {
+   "chunks": 0,
+   "verdict": "HEALTHY",
+   "sections": [],
+   "missing": [
+    "symptom",
+    "pathogen",
+    "transmission",
+    "prevention",
+    "treatment"
+   ]
+  },
+  "grape_isariopsis_leaf_spot": {
+   "chunks": 17,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_bacterial_spot": {
+   "chunks": 14,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_early_blight": {
+   "chunks": 14,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_healthy": {
+   "chunks": 0,
+   "verdict": "HEALTHY",
+   "sections": [],
+   "missing": [
+    "symptom",
+    "pathogen",
+    "transmission",
+    "prevention",
+    "treatment"
+   ]
+  },
+  "tomato_late_blight": {
+   "chunks": 15,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_leaf_mold": {
+   "chunks": 15,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_septoria_leaf_spot": {
+   "chunks": 15,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_spider_mites": {
+   "chunks": 16,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_target_spot": {
+   "chunks": 14,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  },
+  "tomato_yellowleaf_curl_virus": {
+   "chunks": 15,
+   "verdict": "OK",
+   "sections": [
+    "identity",
+    "overview",
+    "pathogen",
+    "prevention",
+    "symptom",
+    "transmission",
+    "treatment"
+   ],
+   "missing": []
+  }
+ },
+ "fallback_classes": [],
+ "ocr_used": false,
+ "sparse_in_milvus": true,
+ "embed_model": "BAAI/bge-base-en-v1.5",
+ "llm_provider": "groq",
+ "llm_model": "llama-3.3-70b-versatile"
+}

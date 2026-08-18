@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}PlantCare — diagnose a leaf{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <p class="eyebrow">Grape · Tomato</p>
+  <h1>Photograph one leaf.<br>Get the disease, how far it has gone,<br>and the page the advice came from.</h1>
+</section>
+
+{% if error %}
+<p class="notice" role="alert">{{ error }}</p>
+{% endif %}
+
+<form class="slot" method="post" action="{{ url_for('analyse') }}"
+      enctype="multipart/form-data" id="uform">
+  <label class="slot-drop" id="drop" for="file">
+    <span class="slot-frame"></span>
+    <span class="slot-label">Choose a leaf photo</span>
+    <span class="slot-hint">One leaf, filling the frame, on a plain background.
+      JPG, PNG, BMP or WEBP up to {{ max_mb }}&nbsp;MB.</span>
+    <input id="file" name="image" type="file" accept="image/*" required>
+    <img id="preview" class="slot-preview" alt="">
+  </label>
+  <button class="button" type="submit" id="go">Diagnose this leaf</button>
+</form>
+
+<section class="steps">
+  <div class="step">
+    <p class="step-index">Step 1</p>
+    <h2>Name it</h2>
+    <p>An EfficientNet-B0 classifier trained on 28,843 grape and tomato leaf images
+       picks one of 13 classes. Below the confidence threshold, or when the leaf does
+       not resemble the training data, it says so and stops instead of guessing.</p>
+  </div>
+  <div class="step">
+    <p class="step-index">Step 2</p>
+    <h2>Measure it</h2>
+    <p>The leaf outline is separated from the background by colour, then anything
+       inside it that is not healthy tissue counts as lesion. Lesion area over leaf
+       area gives the severity band.</p>
+  </div>
+  <div class="step">
+    <p class="step-index">Step 3</p>
+    <h2>Cite it</h2>
+    <p>The predicted class filters a hybrid dense + BM25 index of the IPM documents.
+       Advice is taken from those passages, with the page number attached.</p>
+  </div>
+</section>
+
+<script>
+const fi = document.getElementById('file'),
+      dp = document.getElementById('drop'),
+      pv = document.getElementById('preview'),
+      go = document.getElementById('go');
+
+function show(f) {
+  if (!f) return;
+  const r = new FileReader();
+  r.onload = e => { pv.src = e.target.result; pv.style.display = 'block'; };
+  r.readAsDataURL(f);
+}
+fi.addEventListener('change', e => show(e.target.files[0]));
+['dragenter', 'dragover'].forEach(k =>
+  dp.addEventListener(k, e => { e.preventDefault(); dp.classList.add('over'); }));
+['dragleave', 'drop'].forEach(k =>
+  dp.addEventListener(k, e => { e.preventDefault(); dp.classList.remove('over'); }));
+dp.addEventListener('drop', e => {
+  if (e.dataTransfer.files.length) { fi.files = e.dataTransfer.files; show(fi.files[0]); }
+});
+document.getElementById('uform').addEventListener('submit', () => {
+  go.disabled = true; go.textContent = 'Analysing…';
+});
+</script>
+{% endblock %}

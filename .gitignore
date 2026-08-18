@@ -1,0 +1,52 @@
+# Never commit environments - the previous zip shipped two of them (~25 MB)
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+uploads/*
+!uploads/.gitkeep
+
+# Milvus Lite runtime lock
+artifacts/plantcare.db/LOCK
+
+.DS_Store
+*.log
+
+# secrets
+.env
+.env.local
+
+# --- secrets ---
+.env
+.env.local
+*.key
+*.pem
+
+# --- docker (GitHub pe nahi bhejna) ---
+Dockerfile
+docker-compose.yml
+.dockerignore
+DOCKER.md
+DEPLOY.md
+
+# --- python / notebooks ---
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+venv/
+.venv/
+env/
+
+# --- data & models (bade files) ---
+data/
+*.pt
+*.pth
+*.h5
+*.pkl
+*.zip
+
+# --- misc ---
+.DS_Store
+*.log

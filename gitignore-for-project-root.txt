@@ -1,0 +1,25 @@
+# Secrets - never commit
+.env
+
+# Environments
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+# Model weights: 16 MB, use Git LFS or a release asset instead
+app/artifacts/best_cnn.pt
+
+# Milvus Lite runtime lock
+app/artifacts/plantcare.db/LOCK
+
+# Runtime
+app/uploads/*
+!app/uploads/.gitkeep
+
+# Notebook noise
+.ipynb_checkpoints/
+
+.DS_Store
+*.log

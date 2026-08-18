@@ -1,0 +1,57 @@
+{
+  "backbone": "efficientnet_b0",
+  "img_size": 224,
+  "mean": [
+    0.485,
+    0.456,
+    0.406
+  ],
+  "std": [
+    0.229,
+    0.224,
+    0.225
+  ],
+  "confidence_gate": 0.8,
+  "in_channels": 3,
+  "crops": [
+    "grape",
+    "tomato"
+  ],
+  "num_classes": 13,
+  "preprocess_splits": [
+    "test",
+    "train",
+    "val"
+  ],
+  "preprocess": {
+    "blur_variance_min": 120.0,
+    "unsharp_radius": 3.0,
+    "unsharp_amount": 0.8,
+    "brightness_target": 128.0,
+    "brightness_low": 95.0,
+    "brightness_high": 165.0,
+    "gamma_limits": [
+      0.55,
+      1.85
+    ],
+    "clahe_clip": 2.0,
+    "clahe_grid": 8
+  },
+  "severity_bands": {
+    "healthy_max": 5.0,
+    "mild_max": 15.0,
+    "moderate_max": 35.0
+  },
+  "rejection": {
+    "confidence_gate": 0.8,
+    "ood_threshold": 669.5651,
+    "ood_retention": 0.995,
+    "vegetation_min": 0.06,
+    "vegetation_max": 0.97,
+    "messages": {
+      "no_leaf": "Cannot classify - no leaf detected in the image",
+      "unknown_leaf": "Cannot classify - this leaf type is not in the training dataset",
+      "low_confidence": "Cannot classify - image is unclear or leaf type not recognized"
+    }
+  }
+}

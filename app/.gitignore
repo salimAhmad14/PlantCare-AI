@@ -1,0 +1,15 @@
+# Never commit environments - the previous zip shipped two of them (~25 MB)
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+
+uploads/*
+!uploads/.gitkeep
+
+# Milvus Lite runtime lock
+artifacts/plantcare.db/LOCK
+
+.DS_Store
+*.log

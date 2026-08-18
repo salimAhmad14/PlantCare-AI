@@ -1,0 +1,2799 @@
+{
+ "manifest": {
+  "built_by": "PlantCare_NB02_Kaggle_MilvusLite",
+  "vocabulary": "v2",
+  "section_types": [
+   "identity",
+   "overview",
+   "pathogen",
+   "transmission",
+   "symptom",
+   "prevention",
+   "treatment"
+  ],
+  "classes": [
+   "grape_black_measles",
+   "grape_black_rot",
+   "grape_healthy",
+   "grape_isariopsis_leaf_spot",
+   "tomato_bacterial_spot",
+   "tomato_early_blight",
+   "tomato_healthy",
+   "tomato_late_blight",
+   "tomato_leaf_mold",
+   "tomato_septoria_leaf_spot",
+   "tomato_spider_mites",
+   "tomato_target_spot",
+   "tomato_yellowleaf_curl_virus"
+  ],
+  "healthy_classes": [
+   "grape_healthy",
+   "tomato_healthy"
+  ],
+  "n_chunks": 172,
+  "n_documents": 11,
+  "documents": {
+   "Grape_Black_Measles_RAG_Document.pdf": "grape_black_measles",
+   "Grape_Black_Rot_RAG_Document.pdf": "grape_black_rot",
+   "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf": "grape_isariopsis_leaf_spot",
+   "Tomato_Bacterial_Spot_RAG.pdf": "tomato_bacterial_spot",
+   "Tomato_Early_Blight_RAG.pdf": "tomato_early_blight",
+   "Tomato_Late_Blight_RAG.pdf": "tomato_late_blight",
+   "Tomato_Leaf_Mold_RAG.pdf": "tomato_leaf_mold",
+   "Tomato_Septoria_Leaf_Spot_RAG.pdf": "tomato_septoria_leaf_spot",
+   "Tomato_Spider_Mites_RAG.pdf": "tomato_spider_mites",
+   "Tomato_Target_Spot_RAG.pdf": "tomato_target_spot",
+   "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf": "tomato_yellowleaf_curl_virus"
+  },
+  "coverage": {
+   "grape_black_measles": {
+    "chunks": 18,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "grape_black_rot": {
+    "chunks": 19,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "grape_healthy": {
+    "chunks": 0,
+    "verdict": "HEALTHY",
+    "sections": [],
+    "missing": [
+     "symptom",
+     "pathogen",
+     "transmission",
+     "prevention",
+     "treatment"
+    ]
+   },
+   "grape_isariopsis_leaf_spot": {
+    "chunks": 17,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_bacterial_spot": {
+    "chunks": 14,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_early_blight": {
+    "chunks": 14,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_healthy": {
+    "chunks": 0,
+    "verdict": "HEALTHY",
+    "sections": [],
+    "missing": [
+     "symptom",
+     "pathogen",
+     "transmission",
+     "prevention",
+     "treatment"
+    ]
+   },
+   "tomato_late_blight": {
+    "chunks": 15,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_leaf_mold": {
+    "chunks": 15,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_septoria_leaf_spot": {
+    "chunks": 15,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_spider_mites": {
+    "chunks": 16,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_target_spot": {
+    "chunks": 14,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   },
+   "tomato_yellowleaf_curl_virus": {
+    "chunks": 15,
+    "verdict": "OK",
+    "sections": [
+     "identity",
+     "overview",
+     "pathogen",
+     "prevention",
+     "symptom",
+     "transmission",
+     "treatment"
+    ],
+    "missing": []
+   }
+  },
+  "fallback_classes": [],
+  "ocr_used": false,
+  "sparse_in_milvus": true,
+  "embed_model": "BAAI/bge-base-en-v1.5",
+  "llm_provider": "groq",
+  "llm_model": "llama-3.3-70b-versatile"
+ },
+ "chunks": [
+  {
+   "id": 0,
+   "text": "Grape Black Measles: Common Name: Black Measles (also known as Esca, Spanish Measles, or Apoplexy)",
+   "search_text": "Grape Black Measles - Disease Name & Target Crop: Common Name: Black Measles (also known as Esca, Spanish Measles, or Apoplexy)",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 1,
+   "text": "Grape Black Measles: Target Crop: Grapevine (Vitis vinifera)",
+   "search_text": "Grape Black Measles - Disease Name & Target Crop: Target Crop: Grapevine (Vitis vinifera) Vitis vinifera",
+   "keywords": [
+    "Vitis vinifera"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 2,
+   "text": "Grape Black Measles is caused by a complex of wood-colonizing fungi rather than a single pathogen. The primary fungi involved include: Phaeoacremonium aleophilum Phaeomoniella chlamydospora Various basidiomycete fungi, particularly Fomitiporia mediterranea",
+   "search_text": "Grape Black Measles - Scientific Name (Pathogen): Grape Black Measles is caused by a complex of wood-colonizing fungi rather than a single pathogen. The primary fungi involved include: Phaeoacremonium aleophilum Phaeomoniella chlamydospora Various basidiomycete fungi, particularly Fomitiporia mediterranea Fomitiporia mediterranea Phaeoacremonium aleophilum Phaeomoniella chlamydospora Various basidiomycete",
+   "keywords": [
+    "Fomitiporia mediterranea",
+    "Phaeoacremonium aleophilum",
+    "Phaeomoniella chlamydospora",
+    "Various basidiomycete"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 3,
+   "text": "Black Measles (Esca) is a destructive, chronic grapevine trunk disease that attacks the vascular tissue (wood) of the vine. It restricts water and nutrient flow, leading to internal wood rot. The disease is notorious for remaining asymptomatic in the trunk for years before suddenly manifesting dramatic visual symptoms on leaves and fruit, often during the height of summer. It is considered one of the most severe threats to mature vineyards globally.",
+   "search_text": "Grape Black Measles - Disease Overview: Black Measles (Esca) is a destructive, chronic grapevine trunk disease that attacks the vascular tissue (wood) of the vine. It restricts water and nutrient flow, leading to internal wood rot. The disease is notorious for remaining asymptomatic in the trunk for years before suddenly manifesting dramatic visual symptoms on leaves and fruit, often during the height of summer. It is considered one of the most severe threats to mature vineyards globally.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 4,
+   "text": "Grape Black Measles: Pruning Wounds: The most common point of entry. Fungal spores are dispersed by wind and rain splashing and land on fresh pruning wounds.",
+   "search_text": "Grape Black Measles - Causes & Transmission Vectors: Pruning Wounds: The most common point of entry. Fungal spores are dispersed by wind and rain splashing and land on fresh pruning wounds. Fungal spores",
+   "keywords": [
+    "Fungal spores"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 5,
+   "text": "Infected Nursery Stock: The disease complex can be introduced into a new vineyard via latently infected rootstocks or scions during the grafting process.",
+   "search_text": "Grape Black Measles - Causes & Transmission Vectors: Infected Nursery Stock: The disease complex can be introduced into a new vineyard via latently infected rootstocks or scions during the grafting process.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 6,
+   "text": "Environmental Triggers: Visual symptoms (foliar and fruit) are often triggered by environmental stress, particularly hot, dry weather following rain, which stresses the already compromised vascular system.",
+   "search_text": "Grape Black Measles - Causes & Transmission Vectors: Environmental Triggers: Visual symptoms (foliar and fruit) are often triggered by environmental stress, particularly hot, dry weather following rain, which stresses the already compromised vascular system. Visual symptoms",
+   "keywords": [
+    "Visual symptoms"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 7,
+   "text": "Foliar Symptoms (\"Tiger Stripes\"): Leaves develop interveinal chlorosis (yellowing in white varieties, reddening in red varieties). As the disease progresses, the discolored tissue dies (necrosis), leaving a highly distinct \"tiger-stripe\" pattern of dead tissue bordered by red/yellow margins, with only the main veins remaining green.",
+   "search_text": "Grape Black Measles - Symptoms (Early & Advanced Stages): Foliar Symptoms (\"Tiger Stripes\"): Leaves develop interveinal chlorosis (yellowing in white varieties, reddening in red varieties). As the disease progresses, the discolored tissue dies (necrosis), leaving a highly distinct \"tiger-stripe\" pattern of dead tissue bordered by red/yellow margins, with only the main veins remaining green. Leaves develop",
+   "keywords": [
+    "Leaves develop"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 8,
+   "text": "Fruit Symptoms (\"Black Measles\"): Small, dark brown or purple spots (measles) appear on the berries. These spots can coalesce, causing the skin to crack and the berries to shrivel or raisin before ripening.",
+   "search_text": "Grape Black Measles - Symptoms (Early & Advanced Stages): Fruit Symptoms (\"Black Measles\"): Small, dark brown or purple spots (measles) appear on the berries. These spots can coalesce, causing the skin to crack and the berries to shrivel or raisin before ripening. These spots",
+   "keywords": [
+    "These spots"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 9,
+   "text": "Trunk Symptoms: A cross-section of the trunk or cordons will reveal dark brown or black streaking in the vascular tissue, often surrounding a core of white, spongy, rotted wood.",
+   "search_text": "Grape Black Measles - Symptoms (Early & Advanced Stages): Trunk Symptoms: A cross-section of the trunk or cordons will reveal dark brown or black streaking in the vascular tissue, often surrounding a core of white, spongy, rotted wood.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 10,
+   "text": "Advanced Stage (Apoplexy): In severe cases, the entire vine or a single cordon may suddenly wilt and die within a few days during mid-summer.",
+   "search_text": "Grape Black Measles - Symptoms (Early & Advanced Stages): Advanced Stage (Apoplexy): In severe cases, the entire vine or a single cordon may suddenly wilt and die within a few days during mid-summer.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 11,
+   "text": "Delayed Pruning: Pruning late in the dormant season (late winter or early spring) when wounds heal faster and spore release is naturally lower.",
+   "search_text": "Grape Black Measles - Prevention & Cultural Practices: Delayed Pruning: Pruning late in the dormant season (late winter or early spring) when wounds heal faster and spore release is naturally lower. Pruning late",
+   "keywords": [
+    "Pruning late"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 12,
+   "text": "Double Pruning: A rough initial pruning is done early in winter, leaving long spurs. A final pruning to the desired spur length is done late in the season, cutting away any wood that became infected over the winter.",
+   "search_text": "Grape Black Measles - Prevention & Cultural Practices: Double Pruning: A rough initial pruning is done early in winter, leaving long spurs. A final pruning to the desired spur length is done late in the season, cutting away any wood that became infected over the winter.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 13,
+   "text": "Grape Black Measles: Wound Protection: Applying fungicidal or physical mastic pastes to large pruning wounds immediately after cutting to block spore entry.",
+   "search_text": "Grape Black Measles - Prevention & Cultural Practices: Wound Protection: Applying fungicidal or physical mastic pastes to large pruning wounds immediately after cutting to block spore entry. Applying fungicidal",
+   "keywords": [
+    "Applying fungicidal"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 14,
+   "text": "Sanitation: Removing and burning dead or infected vines and prunings from the vineyard to reduce the local spore load. Disinfecting pruning tools between vines.",
+   "search_text": "Grape Black Measles - Prevention & Cultural Practices: Sanitation: Removing and burning dead or infected vines and prunings from the vineyard to reduce the local spore load. Disinfecting pruning tools between vines. Disinfecting pruning Removing and",
+   "keywords": [
+    "Disinfecting pruning",
+    "Removing and"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 15,
+   "text": "No Complete Cure: Once the wood-rotting fungi are established deep within the trunk, chemical sprays cannot eradicate them. Management focuses on extending the life of the vine and preventing new infections.",
+   "search_text": "Grape Black Measles - Treatment & Solutions (Chemical & Biological): No Complete Cure: Once the wood-rotting fungi are established deep within the trunk, chemical sprays cannot eradicate them. Management focuses on extending the life of the vine and preventing new infections. Management focuses Once the",
+   "keywords": [
+    "Management focuses",
+    "Once the"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 16,
+   "text": "Vine Surgery (Trunk Renewal): The most effective mechanical treatment for an infected vine is to cut off the trunk below the visible wood staining (rot) and retrain a new shoot from the base (sucker) to form a new, healthy trunk.",
+   "search_text": "Grape Black Measles - Treatment & Solutions (Chemical & Biological): Vine Surgery (Trunk Renewal): The most effective mechanical treatment for an infected vine is to cut off the trunk below the visible wood staining (rot) and retrain a new shoot from the base (sucker) to form a new, healthy trunk.",
+   "keywords": [],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 17,
+   "text": "Biological Control: Applications of Trichoderma species (beneficial fungi) to fresh pruning wounds can help colonize the wood first, outcompeting the Esca pathogens and preventing them from entering the vascular system.",
+   "search_text": "Grape Black Measles - Treatment & Solutions (Chemical & Biological): Biological Control: Applications of Trichoderma species (beneficial fungi) to fresh pruning wounds can help colonize the wood first, outcompeting the Esca pathogens and preventing them from entering the vascular system. Esca pathogens Trichoderma species trichoderma",
+   "keywords": [
+    "Esca pathogens",
+    "Trichoderma species",
+    "trichoderma"
+   ],
+   "disease": "grape_black_measles",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Measles_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 18,
+   "text": "Grape Black Rot: Common Name: Black Rot",
+   "search_text": "Grape Black Rot - Disease Name & Target Crop: Common Name: Black Rot",
+   "keywords": [],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 19,
+   "text": "Grape Black Rot: Target Crop: Grapevine (Vitis vinifera and other Vitis species)",
+   "search_text": "Grape Black Rot - Disease Name & Target Crop: Target Crop: Grapevine (Vitis vinifera and other Vitis species) Vitis species Vitis vinifera",
+   "keywords": [
+    "Vitis species",
+    "Vitis vinifera"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 20,
+   "text": "Grape Black Rot: Grape Black Rot is a fungal disease caused by:",
+   "search_text": "Grape Black Rot - Scientific Name (Pathogen): Grape Black Rot is a fungal disease caused by:",
+   "keywords": [],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 21,
+   "text": "Grape Black Rot: Sexual stage (teleomorph): Guignardia bidwellii",
+   "search_text": "Grape Black Rot - Scientific Name (Pathogen): Sexual stage (teleomorph): Guignardia bidwellii Guignardia bidwellii Sexual stage",
+   "keywords": [
+    "Guignardia bidwellii",
+    "Sexual stage"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 22,
+   "text": "Grape Black Rot: Asexual stage (anamorph): Phyllosticta ampelicida",
+   "search_text": "Grape Black Rot - Scientific Name (Pathogen): Asexual stage (anamorph): Phyllosticta ampelicida Asexual stage Phyllosticta ampelicida",
+   "keywords": [
+    "Asexual stage",
+    "Phyllosticta ampelicida"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 23,
+   "text": "Black Rot is one of the most devastating fungal diseases of grapevines, particularly in regions with warm, humid, and rainy spring and summer weather. The fungus can infect all green, growing parts of the vine, including leaves, shoots, tendrils, and fruit. If left unmanaged, Black Rot can result in complete crop loss, as the fungus quickly rots the berries, turning them into hard, black, shriveled \"mummies.\"",
+   "search_text": "Grape Black Rot - Disease Overview: Black Rot is one of the most devastating fungal diseases of grapevines, particularly in regions with warm, humid, and rainy spring and summer weather. The fungus can infect all green, growing parts of the vine, including leaves, shoots, tendrils, and fruit. If left unmanaged, Black Rot can result in complete crop loss, as the fungus quickly rots the berries, turning them into hard, black, shriveled \"mummies.\"",
+   "keywords": [],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 24,
+   "text": "Overwintering: The fungus survives the winter primarily in mummified berries (mummies) left hanging on the trellis or lying on the ground, as well as in cane lesions.",
+   "search_text": "Grape Black Rot - Causes & Transmission Vectors: Overwintering: The fungus survives the winter primarily in mummified berries (mummies) left hanging on the trellis or lying on the ground, as well as in cane lesions.",
+   "keywords": [],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 25,
+   "text": "Spore Release: In the spring, rain triggers the release of ascospores (primary infection) from the mummies. These spores are dispersed by wind and rain splash to newly emerging tissue.",
+   "search_text": "Grape Black Rot - Causes & Transmission Vectors: Spore Release: In the spring, rain triggers the release of ascospores (primary infection) from the mummies. These spores are dispersed by wind and rain splash to newly emerging tissue. These spores",
+   "keywords": [
+    "These spores"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 26,
+   "text": "Secondary Infection: Once the fungus establishes on the vine, it produces asexual spores (conidia) that are splashed by rain to other leaves and developing fruit, causing explosive disease spread during wet weather.",
+   "search_text": "Grape Black Rot - Causes & Transmission Vectors: Secondary Infection: Once the fungus establishes on the vine, it produces asexual spores (conidia) that are splashed by rain to other leaves and developing fruit, causing explosive disease spread during wet weather. Once the",
+   "keywords": [
+    "Once the"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 27,
+   "text": "Foliar Symptoms: Appears in late spring as small, circular, reddish-brown spots on the leaves. As the spots enlarge, the centers turn tan with a distinct dark brown or black border. Tiny black dots (pycnidia, the fungal fruiting bodies) appear in a ring inside the lesion.",
+   "search_text": "Grape Black Rot - Symptoms (Early & Advanced Stages): Foliar Symptoms: Appears in late spring as small, circular, reddish-brown spots on the leaves. As the spots enlarge, the centers turn tan with a distinct dark brown or black border. Tiny black dots (pycnidia, the fungal fruiting bodies) appear in a ring inside the lesion. Tiny black",
+   "keywords": [
+    "Tiny black"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 28,
+   "text": "Shoot and Tendril Symptoms: Sunken, elongated, dark/purple lesions (cankers) form on stems and tendrils, which can cause them to girdle and die.",
+   "search_text": "Grape Black Rot - Symptoms (Early & Advanced Stages): Shoot and Tendril Symptoms: Sunken, elongated, dark/purple lesions (cankers) form on stems and tendrils, which can cause them to girdle and die. Shoot and",
+   "keywords": [
+    "Shoot and"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 29,
+   "text": "Fruit Symptoms (Advanced Stage): This is the most destructive phase. Berries initially show a small, light-brown circular spot. Within a few days, the entire berry rots, turns black, and shrivels into a hard, wrinkled mummy heavily studded with black pycnidia.",
+   "search_text": "Grape Black Rot - Symptoms (Early & Advanced Stages): Fruit Symptoms (Advanced Stage): This is the most destructive phase. Berries initially show a small, light-brown circular spot. Within a few days, the entire berry rots, turns black, and shrivels into a hard, wrinkled mummy heavily studded with black pycnidia. Berries initially",
+   "keywords": [
+    "Berries initially"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 30,
+   "text": "Sanitation (Crucial): The most important preventative step is removing all mummified berries from the vines and the ground during dormant winter pruning. These must be destroyed or burned to eliminate the overwintering inoculum.",
+   "search_text": "Grape Black Rot - Prevention & Cultural Practices: Sanitation (Crucial): The most important preventative step is removing all mummified berries from the vines and the ground during dormant winter pruning. These must be destroyed or burned to eliminate the overwintering inoculum. These must",
+   "keywords": [
+    "These must"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 31,
+   "text": "Canopy Management: Proper pruning, shoot thinning, and leaf pulling around the fruiting zone improve air circulation and sunlight penetration. This promotes rapid drying of foliage and fruit, reducing the moisture the fungus needs to infect.",
+   "search_text": "Grape Black Rot - Prevention & Cultural Practices: Canopy Management: Proper pruning, shoot thinning, and leaf pulling around the fruiting zone improve air circulation and sunlight penetration. This promotes rapid drying of foliage and fruit, reducing the moisture the fungus needs to infect. Proper pruning This promotes",
+   "keywords": [
+    "Proper pruning",
+    "This promotes"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 32,
+   "text": "Grape Black Rot: Weed Control: Maintaining a clean under-vine area promotes airflow and buries mummies resting on the soil surface.",
+   "search_text": "Grape Black Rot - Prevention & Cultural Practices: Weed Control: Maintaining a clean under-vine area promotes airflow and buries mummies resting on the soil surface.",
+   "keywords": [],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 33,
+   "text": "Resistant Varieties: Planting highly resistant grape cultivars (e.g., Norton, Elvira) in regions where the disease pressure is exceptionally high.",
+   "search_text": "Grape Black Rot - Prevention & Cultural Practices: Resistant Varieties: Planting highly resistant grape cultivars (e.g., Norton, Elvira) in regions where the disease pressure is exceptionally high. Planting highly",
+   "keywords": [
+    "Planting highly"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 34,
+   "text": "Fungicide Application Timing: Chemical control must be preventative. The most critical period for protection is from immediate pre-bloom through 3-4 weeks post-bloom, as young, developing berries are highly susceptible. Berries become naturally resistant to infection as they mature (usually around veraison).",
+   "search_text": "Grape Black Rot - Treatment & Solutions (Chemical & Biological): Fungicide Application Timing: Chemical control must be preventative. The most critical period for protection is from immediate pre-bloom through 3-4 weeks post-bloom, as young, developing berries are highly susceptible. Berries become naturally resistant to infection as they mature (usually around veraison). Berries become Chemical control",
+   "keywords": [
+    "Berries become",
+    "Chemical control"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 35,
+   "text": "Chemical Treatments: Effective fungicides include protectants like Mancozeb and Captan, and systemic fungicides like Myclobutanil and Tebuconazole (sterol inhibitors). Fungicides must be rotated to prevent resistance.",
+   "search_text": "Grape Black Rot - Treatment & Solutions (Chemical & Biological): Chemical Treatments: Effective fungicides include protectants like Mancozeb and Captan, and systemic fungicides like Myclobutanil and Tebuconazole (sterol inhibitors). Fungicides must be rotated to prevent resistance. Effective fungicides Fungicides must Mancozeb and Myclobutanil and captan mancozeb myclobutanil tebuconazole",
+   "keywords": [
+    "Effective fungicides",
+    "Fungicides must",
+    "Mancozeb and",
+    "Myclobutanil and",
+    "captan",
+    "mancozeb",
+    "myclobutanil",
+    "tebuconazole"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 36,
+   "text": "Biological Control: Biofungicides (such as those containing Bacillus subtilis) can be used in organic systems, though they are generally less effective under heavy disease pressure than conventional systemic fungicides and require meticulous canopy management and sanitation to be viable.",
+   "search_text": "Grape Black Rot - Treatment & Solutions (Chemical & Biological): Biological Control: Biofungicides (such as those containing Bacillus subtilis) can be used in organic systems, though they are generally less effective under heavy disease pressure than conventional systemic fungicides and require meticulous canopy management and sanitation to be viable. Bacillus subtilis bacillus",
+   "keywords": [
+    "Bacillus subtilis",
+    "bacillus"
+   ],
+   "disease": "grape_black_rot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Black_Rot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 37,
+   "text": "Grape Isariopsis Leaf Spot: Common Name: Isariopsis Leaf Spot (also known simply as Grape Leaf Spot)",
+   "search_text": "Grape Isariopsis Leaf Spot - Disease Name & Target Crop: Common Name: Isariopsis Leaf Spot (also known simply as Grape Leaf Spot)",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 38,
+   "text": "Grape Isariopsis Leaf Spot: Target Crop: Grapevine (Vitis vinifera and other Vitis species)",
+   "search_text": "Grape Isariopsis Leaf Spot - Disease Name & Target Crop: Target Crop: Grapevine (Vitis vinifera and other Vitis species) Vitis species Vitis vinifera",
+   "keywords": [
+    "Vitis species",
+    "Vitis vinifera"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 39,
+   "text": "Grape Isariopsis Leaf Spot is a fungal disease caused by the pathogen: Pseudocercospora vitis (formerly known as Isariopsis clavispora or Phaeoisariopsis vitis)",
+   "search_text": "Grape Isariopsis Leaf Spot - Scientific Name (Pathogen): Grape Isariopsis Leaf Spot is a fungal disease caused by the pathogen: Pseudocercospora vitis (formerly known as Isariopsis clavispora or Phaeoisariopsis vitis) Isariopsis clavispora Phaeoisariopsis vitis Pseudocercospora vitis",
+   "keywords": [
+    "Isariopsis clavispora",
+    "Phaeoisariopsis vitis",
+    "Pseudocercospora vitis"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 40,
+   "text": "Isariopsis Leaf Spot is primarily a foliar disease that occurs in grape-growing regions characterized by warm, humid climates. It typically appears later in the growing season, often post-harvest or late summer. While it generally does not directly infect the grape berries or wood, severe infections can cause rapid and premature defoliation. This loss of foliage limits the vine's ability to photosynthesize, thereby reducing the accumulation of carbohydrate reserves needed for winter survival and robust shoot growth the following spring.",
+   "search_text": "Grape Isariopsis Leaf Spot - Disease Overview: Isariopsis Leaf Spot is primarily a foliar disease that occurs in grape-growing regions characterized by warm, humid climates. It typically appears later in the growing season, often post-harvest or late summer. While it generally does not directly infect the grape berries or wood, severe infections can cause rapid and premature defoliation. This loss of foliage limits the vine's ability to photosynthesize, thereby reducing the accumulation of carbohydrate reserves needed for winter survival and robust shoot growth the following spring. This loss",
+   "keywords": [
+    "This loss"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 41,
+   "text": "Overwintering: The fungus survives the winter months primarily as mycelium or fruiting bodies (stromata) in fallen, infected grape leaves on the vineyard floor.",
+   "search_text": "Grape Isariopsis Leaf Spot - Causes & Transmission Vectors: Overwintering: The fungus survives the winter months primarily as mycelium or fruiting bodies (stromata) in fallen, infected grape leaves on the vineyard floor.",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 42,
+   "text": "Spore Release: In the spring and summer, warm temperatures and rainfall stimulate the production of conidia (asexual spores) from the overwintered leaf debris.",
+   "search_text": "Grape Isariopsis Leaf Spot - Causes & Transmission Vectors: Spore Release: In the spring and summer, warm temperatures and rainfall stimulate the production of conidia (asexual spores) from the overwintered leaf debris.",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 43,
+   "text": "Transmission: These spores are dispersed upward into the canopy by wind and splashing rain. High relative humidity and prolonged leaf wetness are essential for the spores to germinate and infect the healthy leaves.",
+   "search_text": "Grape Isariopsis Leaf Spot - Causes & Transmission Vectors: Transmission: These spores are dispersed upward into the canopy by wind and splashing rain. High relative humidity and prolonged leaf wetness are essential for the spores to germinate and infect the healthy leaves. High relative These spores",
+   "keywords": [
+    "High relative",
+    "These spores"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 1
+  },
+  {
+   "id": 44,
+   "text": "Early Foliar Symptoms: The disease first appears on the upper surface of the leaves as small, irregular to angular spots. These lesions are initially dark brown to brownish-red. A key identifying feature is that the spots are often distinctly bordered by the small veins of the leaf, giving them an angular appearance.",
+   "search_text": "Grape Isariopsis Leaf Spot - Symptoms (Early & Advanced Stages): Early Foliar Symptoms: The disease first appears on the upper surface of the leaves as small, irregular to angular spots. These lesions are initially dark brown to brownish-red. A key identifying feature is that the spots are often distinctly bordered by the small veins of the leaf, giving them an angular appearance. These lesions",
+   "keywords": [
+    "These lesions"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 45,
+   "text": "Signs on Leaf Underside: During periods of high humidity, inspecting the underside of the leaf directly beneath the spots reveals a dark, grayish-black, fuzzy or velvety growth. This is the fungus actively producing spores (conidiophores).",
+   "search_text": "Grape Isariopsis Leaf Spot - Symptoms (Early & Advanced Stages): Signs on Leaf Underside: During periods of high humidity, inspecting the underside of the leaf directly beneath the spots reveals a dark, grayish-black, fuzzy or velvety growth. This is the fungus actively producing spores (conidiophores). During periods",
+   "keywords": [
+    "During periods"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 46,
+   "text": "Advanced Stage (Defoliation): As the disease progresses, the lesions may coalesce, covering large areas of the leaf surface. The infected leaves turn yellow (chlorosis), dry up, and fall off the vine prematurely.",
+   "search_text": "Grape Isariopsis Leaf Spot - Symptoms (Early & Advanced Stages): Advanced Stage (Defoliation): As the disease progresses, the lesions may coalesce, covering large areas of the leaf surface. The infected leaves turn yellow (chlorosis), dry up, and fall off the vine prematurely.",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 47,
+   "text": "Grape Isariopsis Leaf Spot: Fruit and Stems: Infections on berries or shoots are extremely rare; the disease is almost exclusively confined to the foliage.",
+   "search_text": "Grape Isariopsis Leaf Spot - Symptoms (Early & Advanced Stages): Fruit and Stems: Infections on berries or shoots are extremely rare; the disease is almost exclusively confined to the foliage. Fruit and",
+   "keywords": [
+    "Fruit and"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 48,
+   "text": "Sanitation (Vineyard Floor Management): Since the pathogen overwinters in leaf litter, collecting, mulching, or cultivating fallen leaves into the soil in autumn/winter significantly reduces the primary inoculum for the next season.",
+   "search_text": "Grape Isariopsis Leaf Spot - Prevention & Cultural Practices: Sanitation (Vineyard Floor Management): Since the pathogen overwinters in leaf litter, collecting, mulching, or cultivating fallen leaves into the soil in autumn/winter significantly reduces the primary inoculum for the next season. Since the",
+   "keywords": [
+    "Since the"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 49,
+   "text": "Canopy Management: Practices that open the canopy—such as proper shoot positioning, shoot thinning, and selective leaf removal—increase airflow and sunlight penetration. This promotes faster drying of leaves, reducing the wetness duration required for fungal infection.",
+   "search_text": "Grape Isariopsis Leaf Spot - Prevention & Cultural Practices: Canopy Management: Practices that open the canopy—such as proper shoot positioning, shoot thinning, and selective leaf removal—increase airflow and sunlight penetration. This promotes faster drying of leaves, reducing the wetness duration required for fungal infection. Practices that This promotes",
+   "keywords": [
+    "Practices that",
+    "This promotes"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 50,
+   "text": "Weed Control: Keeping the under-vine area free of tall weeds improves air circulation near the ground, lowering relative humidity and slowing the upward splash of spores.",
+   "search_text": "Grape Isariopsis Leaf Spot - Prevention & Cultural Practices: Weed Control: Keeping the under-vine area free of tall weeds improves air circulation near the ground, lowering relative humidity and slowing the upward splash of spores. Keeping the",
+   "keywords": [
+    "Keeping the"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 2
+  },
+  {
+   "id": 51,
+   "text": "Fungicide Programs: Often, Isariopsis Leaf Spot is incidentally controlled by the routine fungicide programs designed to target more severe diseases like Downy Mildew or Black Rot. Therefore, dedicated sprays are only necessary in high-pressure environments or highly susceptible varieties.",
+   "search_text": "Grape Isariopsis Leaf Spot - Treatment & Solutions (Chemical & Biological): Fungicide Programs: Often, Isariopsis Leaf Spot is incidentally controlled by the routine fungicide programs designed to target more severe diseases like Downy Mildew or Black Rot. Therefore, dedicated sprays are only necessary in high-pressure environments or highly susceptible varieties.",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 52,
+   "text": "Chemical Control: Copper-based fungicides (e.g., Bordeaux mixture) and broad-spectrum protectants like Mancozeb are highly effective when applied preventatively. Applications are typically most beneficial from mid-summer onward when symptoms first appear or weather conditions become favorable for the fungus.",
+   "search_text": "Grape Isariopsis Leaf Spot - Treatment & Solutions (Chemical & Biological): Chemical Control: Copper-based fungicides (e.g., Bordeaux mixture) and broad-spectrum protectants like Mancozeb are highly effective when applied preventatively. Applications are typically most beneficial from mid-summer onward when symptoms first appear or weather conditions become favorable for the fungus. Applications are Bordeaux mixture Mancozeb are bordeaux copper mancozeb",
+   "keywords": [
+    "Applications are",
+    "Bordeaux mixture",
+    "Mancozeb are",
+    "bordeaux",
+    "copper",
+    "mancozeb"
+   ],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 53,
+   "text": "Post-Harvest Management: In regions where the disease causes severe premature leaf drop, a post-harvest fungicide application may be warranted to retain the canopy long enough for the vine to store adequate winter reserves.",
+   "search_text": "Grape Isariopsis Leaf Spot - Treatment & Solutions (Chemical & Biological): Post-Harvest Management: In regions where the disease causes severe premature leaf drop, a post-harvest fungicide application may be warranted to retain the canopy long enough for the vine to store adequate winter reserves.",
+   "keywords": [],
+   "disease": "grape_isariopsis_leaf_spot",
+   "crop": "grape",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Grape_Isariopsis_Leaf_Spot_RAG_Document.pdf",
+   "page": 3
+  },
+  {
+   "id": 54,
+   "text": "Tomato Bacterial Spot: Common Name: Bacterial Spot",
+   "search_text": "Tomato Bacterial Spot - Disease Name & Target Crop: Common Name: Bacterial Spot",
+   "keywords": [],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 55,
+   "text": "Tomato Bacterial Spot: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Bacterial Spot - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 56,
+   "text": "Tomato Bacterial Spot: Xanthomonas species (e.g., X. euvesicatoria, X. vesicatoria, X. perforans, X. gardneri)",
+   "search_text": "Tomato Bacterial Spot - Scientific Name (Pathogen): Xanthomonas species (e.g., X. euvesicatoria, X. vesicatoria, X. perforans, X. gardneri) Xanthomonas species",
+   "keywords": [
+    "Xanthomonas species"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 57,
+   "text": "Bacterial spot is one of the most devastating diseases of tomatoes grown in warm, moist environments. It causes severe defoliation, which exposes the fruit to sunscald, and produces unsightly lesions on the fruit, rendering it unmarketable. The disease is notoriously difficult to control once established.",
+   "search_text": "Tomato Bacterial Spot - Disease Overview: Bacterial spot is one of the most devastating diseases of tomatoes grown in warm, moist environments. It causes severe defoliation, which exposes the fruit to sunscald, and produces unsightly lesions on the fruit, rendering it unmarketable. The disease is notoriously difficult to control once established. Bacterial spot",
+   "keywords": [
+    "Bacterial spot"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 58,
+   "text": "Seedborne & Debris: The bacteria often enter the field on infected seeds or transplants. It can also survive in crop debris from the previous season.",
+   "search_text": "Tomato Bacterial Spot - Causes & Transmission Vectors: Seedborne & Debris: The bacteria often enter the field on infected seeds or transplants. It can also survive in crop debris from the previous season.",
+   "keywords": [],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 59,
+   "text": "Tomato Bacterial Spot: Spread: Splashing rain, overhead irrigation, and handling wet plants readily spread the bacteria from plant to plant.",
+   "search_text": "Tomato Bacterial Spot - Causes & Transmission Vectors: Spread: Splashing rain, overhead irrigation, and handling wet plants readily spread the bacteria from plant to plant. Splashing rain",
+   "keywords": [
+    "Splashing rain"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 60,
+   "text": "Tomato Bacterial Spot: Environment: Thrives in high humidity and warm temperatures (75-86°F / 24-30°C).",
+   "search_text": "Tomato Bacterial Spot - Causes & Transmission Vectors: Environment: Thrives in high humidity and warm temperatures (75-86°F / 24-30°C).",
+   "keywords": [],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 61,
+   "text": "Foliar Symptoms: Small, water-soaked, greasy spots appear on leaves. These spots turn dark brown to black and often become angular as they are restricted by small leaf veins. Yellow halos may form around the spots. Severe infection leads to leaves turning yellow and dropping.",
+   "search_text": "Tomato Bacterial Spot - Symptoms (Early & Advanced Stages): Foliar Symptoms: Small, water-soaked, greasy spots appear on leaves. These spots turn dark brown to black and often become angular as they are restricted by small leaf veins. Yellow halos may form around the spots. Severe infection leads to leaves turning yellow and dropping. Severe infection These spots Yellow halos",
+   "keywords": [
+    "Severe infection",
+    "These spots",
+    "Yellow halos"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 62,
+   "text": "Fruit Symptoms: Small, dark, raised, scabby or wart-like lesions appear on green fruit. As fruit matures, these spots remain, making the fruit visually unappealing, though the decay usually does not extend deep into the flesh.",
+   "search_text": "Tomato Bacterial Spot - Symptoms (Early & Advanced Stages): Fruit Symptoms: Small, dark, raised, scabby or wart-like lesions appear on green fruit. As fruit matures, these spots remain, making the fruit visually unappealing, though the decay usually does not extend deep into the flesh.",
+   "keywords": [],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 63,
+   "text": "Tomato Bacterial Spot: Clean Seed: Use certified disease-free seeds and transplants. Hot water seed treatment can eradicate seedborne bacteria.",
+   "search_text": "Tomato Bacterial Spot - Prevention & Cultural Practices: Clean Seed: Use certified disease-free seeds and transplants. Hot water seed treatment can eradicate seedborne bacteria.",
+   "keywords": [],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 64,
+   "text": "Tomato Bacterial Spot: Crop Rotation: Avoid planting tomatoes or peppers in the same field for at least 2-3 years.",
+   "search_text": "Tomato Bacterial Spot - Prevention & Cultural Practices: Crop Rotation: Avoid planting tomatoes or peppers in the same field for at least 2-3 years. Avoid planting",
+   "keywords": [
+    "Avoid planting"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 65,
+   "text": "Tomato Bacterial Spot: Water Management: Use drip irrigation instead of overhead sprinklers. Avoid working in the field when foliage is wet.",
+   "search_text": "Tomato Bacterial Spot - Prevention & Cultural Practices: Water Management: Use drip irrigation instead of overhead sprinklers. Avoid working in the field when foliage is wet. Avoid working",
+   "keywords": [
+    "Avoid working"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 66,
+   "text": "Chemical Control: Copper-based bactericides are the standard preventative treatment, often mixed with Mancozeb to increase efficacy. However, copper resistance is common in many Xanthomonas populations.",
+   "search_text": "Tomato Bacterial Spot - Treatment & Solutions (Chemical & Biological): Chemical Control: Copper-based bactericides are the standard preventative treatment, often mixed with Mancozeb to increase efficacy. However, copper resistance is common in many Xanthomonas populations. Xanthomonas populations copper mancozeb",
+   "keywords": [
+    "Xanthomonas populations",
+    "copper",
+    "mancozeb"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 67,
+   "text": "Plant Defense Elicitors: Products containing acibenzolar-S-methyl (e.g., Actigard) can trigger the plant's systemic acquired resistance (SAR) to help fight off the bacteria.",
+   "search_text": "Tomato Bacterial Spot - Treatment & Solutions (Chemical & Biological): Plant Defense Elicitors: Products containing acibenzolar-S-methyl (e.g., Actigard) can trigger the plant's systemic acquired resistance (SAR) to help fight off the bacteria. Products containing acibenzolar actigard",
+   "keywords": [
+    "Products containing",
+    "acibenzolar",
+    "actigard"
+   ],
+   "disease": "tomato_bacterial_spot",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Bacterial_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 68,
+   "text": "Tomato Early Blight: Common Name: Early Blight",
+   "search_text": "Tomato Early Blight - Disease Name & Target Crop: Common Name: Early Blight",
+   "keywords": [],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 69,
+   "text": "Tomato Early Blight: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Early Blight - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 70,
+   "text": "Tomato Early Blight: Alternaria linariae (formerly Alternaria tomatophila) and Alternaria solani",
+   "search_text": "Tomato Early Blight - Scientific Name (Pathogen): Alternaria linariae (formerly Alternaria tomatophila) and Alternaria solani Alternaria linariae Alternaria solani Alternaria tomatophila",
+   "keywords": [
+    "Alternaria linariae",
+    "Alternaria solani",
+    "Alternaria tomatophila"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 71,
+   "text": "Early blight is a highly common fungal disease of tomatoes. Despite its name, it can occur at any time during the growing season. It primarily attacks older foliage first, slowly moving up the plant. While it rarely kills the plant outright, severe defoliation significantly reduces yield and exposes fruit to sunscald.",
+   "search_text": "Tomato Early Blight - Disease Overview: Early blight is a highly common fungal disease of tomatoes. Despite its name, it can occur at any time during the growing season. It primarily attacks older foliage first, slowly moving up the plant. While it rarely kills the plant outright, severe defoliation significantly reduces yield and exposes fruit to sunscald. Despite its Early blight",
+   "keywords": [
+    "Despite its",
+    "Early blight"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 72,
+   "text": "Tomato Early Blight: Overwintering: The fungus survives in infected plant debris in the soil, on seeds, and on solanaceous weeds (like nightshade).",
+   "search_text": "Tomato Early Blight - Causes & Transmission Vectors: Overwintering: The fungus survives in infected plant debris in the soil, on seeds, and on solanaceous weeds (like nightshade).",
+   "keywords": [],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 73,
+   "text": "Tomato Early Blight: Transmission: Spores are blown by wind or splashed by rain onto lower leaves.",
+   "search_text": "Tomato Early Blight - Causes & Transmission Vectors: Transmission: Spores are blown by wind or splashed by rain onto lower leaves. Spores are",
+   "keywords": [
+    "Spores are"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 74,
+   "text": "Tomato Early Blight: Environment: Favors warm temperatures (75-85°F) paired with heavy dew, rainfall, or high humidity.",
+   "search_text": "Tomato Early Blight - Causes & Transmission Vectors: Environment: Favors warm temperatures (75-85°F) paired with heavy dew, rainfall, or high humidity. Favors warm",
+   "keywords": [
+    "Favors warm"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 75,
+   "text": "Foliar Symptoms: Begins on the oldest, lowest leaves as small brown spots. As the spots enlarge (up to 1/2 inch), they develop characteristic concentric rings, resembling a \"bullseye\" or target. The tissue around the spots often turns yellow (chlorosis).",
+   "search_text": "Tomato Early Blight - Symptoms (Early & Advanced Stages): Foliar Symptoms: Begins on the oldest, lowest leaves as small brown spots. As the spots enlarge (up to 1/2 inch), they develop characteristic concentric rings, resembling a \"bullseye\" or target. The tissue around the spots often turns yellow (chlorosis).",
+   "keywords": [],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 76,
+   "text": "Tomato Early Blight: Stem Symptoms: Dark, sunken lesions (cankers) can form on stems, sometimes girdling seedlings (collar rot).",
+   "search_text": "Tomato Early Blight - Symptoms (Early & Advanced Stages): Stem Symptoms: Dark, sunken lesions (cankers) can form on stems, sometimes girdling seedlings (collar rot).",
+   "keywords": [],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 77,
+   "text": "Fruit Symptoms: Infection typically occurs at the stem end of the fruit (the calyx). Lesions are dark, sunken, leathery, and may also show concentric rings.",
+   "search_text": "Tomato Early Blight - Symptoms (Early & Advanced Stages): Fruit Symptoms: Infection typically occurs at the stem end of the fruit (the calyx). Lesions are dark, sunken, leathery, and may also show concentric rings. Infection typically Lesions are",
+   "keywords": [
+    "Infection typically",
+    "Lesions are"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 78,
+   "text": "Cultural Practices: Stake or cage plants and prune lower leaves to keep foliage off the soil and improve airflow. Apply mulch to create a barrier against soil-splashed spores.",
+   "search_text": "Tomato Early Blight - Prevention & Cultural Practices: Cultural Practices: Stake or cage plants and prune lower leaves to keep foliage off the soil and improve airflow. Apply mulch to create a barrier against soil-splashed spores. Apply mulch",
+   "keywords": [
+    "Apply mulch"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 79,
+   "text": "Sanitation: Remove and destroy infected plant debris at the end of the season. Rotate crops (no tomatoes, potatoes, or eggplants for 2-3 years).",
+   "search_text": "Tomato Early Blight - Prevention & Cultural Practices: Sanitation: Remove and destroy infected plant debris at the end of the season. Rotate crops (no tomatoes, potatoes, or eggplants for 2-3 years). Remove and Rotate crops",
+   "keywords": [
+    "Remove and",
+    "Rotate crops"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 80,
+   "text": "Fungicides: Preventative sprays are highly effective. Chlorothalonil, Mancozeb, and Copper fungicides are standard protectants. Systemic fungicides may be needed under high disease pressure.",
+   "search_text": "Tomato Early Blight - Treatment & Solutions (Chemical & Biological): Fungicides: Preventative sprays are highly effective. Chlorothalonil, Mancozeb, and Copper fungicides are standard protectants. Systemic fungicides may be needed under high disease pressure. Copper fungicides Preventative sprays Systemic fungicides chlorothalonil copper mancozeb",
+   "keywords": [
+    "Copper fungicides",
+    "Preventative sprays",
+    "Systemic fungicides",
+    "chlorothalonil",
+    "copper",
+    "mancozeb"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 81,
+   "text": "Tomato Early Blight: Biologicals: Biofungicides (like Bacillus subtilis) can be used as a preventative measure in low-pressure or organic systems.",
+   "search_text": "Tomato Early Blight - Treatment & Solutions (Chemical & Biological): Biologicals: Biofungicides (like Bacillus subtilis) can be used as a preventative measure in low-pressure or organic systems. Bacillus subtilis bacillus",
+   "keywords": [
+    "Bacillus subtilis",
+    "bacillus"
+   ],
+   "disease": "tomato_early_blight",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": true,
+   "doc": "Tomato_Early_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 82,
+   "text": "Tomato Late Blight: Common Name: Late Blight",
+   "search_text": "Tomato Late Blight - Disease Name & Target Crop: Common Name: Late Blight",
+   "keywords": [],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 83,
+   "text": "Tomato Late Blight: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Late Blight - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 84,
+   "text": "Tomato Late Blight: Phytophthora infestans (an oomycete or water mold)",
+   "search_text": "Tomato Late Blight - Scientific Name (Pathogen): Phytophthora infestans (an oomycete or water mold) Phytophthora infestans",
+   "keywords": [
+    "Phytophthora infestans"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 85,
+   "text": "Late blight is one of the most destructive plant diseases known (the same pathogen responsible for the Irish Potato Famine). It is highly contagious and can completely destroy a tomato field within a few days under favorable weather conditions. It requires living host tissue to survive over winter in cold climates.",
+   "search_text": "Tomato Late Blight - Disease Overview: Late blight is one of the most destructive plant diseases known (the same pathogen responsible for the Irish Potato Famine). It is highly contagious and can completely destroy a tomato field within a few days under favorable weather conditions. It requires living host tissue to survive over winter in cold climates. Late blight",
+   "keywords": [
+    "Late blight"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 86,
+   "text": "Transmission: Spores (sporangia) are primarily airborne and can travel miles on the wind. They can also be spread by splashing rain or on infected transplants/seed potatoes.",
+   "search_text": "Tomato Late Blight - Causes & Transmission Vectors: Transmission: Spores (sporangia) are primarily airborne and can travel miles on the wind. They can also be spread by splashing rain or on infected transplants/seed potatoes. They can",
+   "keywords": [
+    "They can"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 87,
+   "text": "Environment: Thrives in cool, wet weather (60-70°F) with high humidity, heavy dew, or frequent rain. Hot, dry weather stops the progression of the disease.",
+   "search_text": "Tomato Late Blight - Causes & Transmission Vectors: Environment: Thrives in cool, wet weather (60-70°F) with high humidity, heavy dew, or frequent rain. Hot, dry weather stops the progression of the disease.",
+   "keywords": [],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 88,
+   "text": "Foliar Symptoms: Large, irregular, water-soaked, pale-green to brown lesions appear on leaves. The lesions are not constrained by leaf veins.",
+   "search_text": "Tomato Late Blight - Symptoms (Early & Advanced Stages): Foliar Symptoms: Large, irregular, water-soaked, pale-green to brown lesions appear on leaves. The lesions are not constrained by leaf veins.",
+   "keywords": [],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 89,
+   "text": "Tomato Late Blight: Fungal Signs: During high humidity or early morning dew, a distinct white, fuzzy mold growth appears on the underside of the leaf lesions.",
+   "search_text": "Tomato Late Blight - Symptoms (Early & Advanced Stages): Fungal Signs: During high humidity or early morning dew, a distinct white, fuzzy mold growth appears on the underside of the leaf lesions. During high",
+   "keywords": [
+    "During high"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 90,
+   "text": "Tomato Late Blight: Stem Symptoms: Dark brown to black, irregular lesions appear on stems and petioles.",
+   "search_text": "Tomato Late Blight - Symptoms (Early & Advanced Stages): Stem Symptoms: Dark brown to black, irregular lesions appear on stems and petioles. Dark brown",
+   "keywords": [
+    "Dark brown"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 91,
+   "text": "Fruit Symptoms: Large, dark brown, firm, greasy-looking patches develop on green or ripe fruit. The fruit eventually rots but remains firm initially.",
+   "search_text": "Tomato Late Blight - Symptoms (Early & Advanced Stages): Fruit Symptoms: Large, dark brown, firm, greasy-looking patches develop on green or ripe fruit. The fruit eventually rots but remains firm initially.",
+   "keywords": [],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 92,
+   "text": "Tomato Late Blight: Source Elimination: Destroy volunteer tomato and potato plants. Do not compost store-bought potatoes or infected plant material.",
+   "search_text": "Tomato Late Blight - Prevention & Cultural Practices: Source Elimination: Destroy volunteer tomato and potato plants. Do not compost store-bought potatoes or infected plant material. Destroy volunteer",
+   "keywords": [
+    "Destroy volunteer"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 93,
+   "text": "Tomato Late Blight: Weather Monitoring: Track regional blight alerts (like USAblight) to know when spores are active in your area.",
+   "search_text": "Tomato Late Blight - Prevention & Cultural Practices: Weather Monitoring: Track regional blight alerts (like USAblight) to know when spores are active in your area. Track regional",
+   "keywords": [
+    "Track regional"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 94,
+   "text": "Tomato Late Blight: Resistant Varieties: Plant late-blight resistant tomato varieties (e.g., 'Defiant', 'Mountain Magic', 'Iron Lady').",
+   "search_text": "Tomato Late Blight - Prevention & Cultural Practices: Resistant Varieties: Plant late-blight resistant tomato varieties (e.g., 'Defiant', 'Mountain Magic', 'Iron Lady'). Plant late",
+   "keywords": [
+    "Plant late"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 95,
+   "text": "Immediate Action Required: Once identified, infected plants should be immediately pulled, bagged, and destroyed (not composted) to protect neighboring crops.",
+   "search_text": "Tomato Late Blight - Treatment & Solutions (Chemical & Biological): Immediate Action Required: Once identified, infected plants should be immediately pulled, bagged, and destroyed (not composted) to protect neighboring crops. Once identified",
+   "keywords": [
+    "Once identified"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 96,
+   "text": "Fungicides: Preventative applications (Chlorothalonil, Copper) must be applied before infection during favorable weather. If infection begins, targeted oomycete-specific systemic fungicides (e.g., Mefenoxam, if the strain is not resistant) are required, but often cannot save heavily infected plants.",
+   "search_text": "Tomato Late Blight - Treatment & Solutions (Chemical & Biological): Fungicides: Preventative applications (Chlorothalonil, Copper) must be applied before infection during favorable weather. If infection begins, targeted oomycete-specific systemic fungicides (e.g., Mefenoxam, if the strain is not resistant) are required, but often cannot save heavily infected plants. Preventative applications chlorothalonil copper mefenoxam",
+   "keywords": [
+    "Preventative applications",
+    "chlorothalonil",
+    "copper",
+    "mefenoxam"
+   ],
+   "disease": "tomato_late_blight",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Late_Blight_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 97,
+   "text": "Tomato Leaf Mold: Common Name: Leaf Mold",
+   "search_text": "Tomato Leaf Mold - Disease Name & Target Crop: Common Name: Leaf Mold",
+   "keywords": [],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 98,
+   "text": "Tomato Leaf Mold: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Leaf Mold - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 99,
+   "text": "Tomato Leaf Mold: Passalora fulva (formerly Fulvia fulva or Cladosporium fulvum)",
+   "search_text": "Tomato Leaf Mold - Scientific Name (Pathogen): Passalora fulva (formerly Fulvia fulva or Cladosporium fulvum) Cladosporium fulvum Fulvia fulva Passalora fulva",
+   "keywords": [
+    "Cladosporium fulvum",
+    "Fulvia fulva",
+    "Passalora fulva"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 100,
+   "text": "Leaf mold is a fungal disease that is primarily a problem in high tunnels, greenhouses, or densely planted fields where relative humidity is consistently very high. It rarely affects outdoor crops in dry climates. The disease targets foliage, leading to premature leaf drop and reduced yields.",
+   "search_text": "Tomato Leaf Mold - Disease Overview: Leaf mold is a fungal disease that is primarily a problem in high tunnels, greenhouses, or densely planted fields where relative humidity is consistently very high. It rarely affects outdoor crops in dry climates. The disease targets foliage, leading to premature leaf drop and reduced yields. Leaf mold",
+   "keywords": [
+    "Leaf mold"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 101,
+   "text": "Tomato Leaf Mold: Environment (Primary Driver): The pathogen strictly requires high relative humidity (greater than 85%) to infect and produce spores.",
+   "search_text": "Tomato Leaf Mold - Causes & Transmission Vectors: Environment (Primary Driver): The pathogen strictly requires high relative humidity (greater than 85%) to infect and produce spores.",
+   "keywords": [],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 102,
+   "text": "Tomato Leaf Mold: Overwintering: Survives as sclerotia (hardened fungal masses) or spores in crop debris, on greenhouse structures, and in soil.",
+   "search_text": "Tomato Leaf Mold - Causes & Transmission Vectors: Overwintering: Survives as sclerotia (hardened fungal masses) or spores in crop debris, on greenhouse structures, and in soil.",
+   "keywords": [],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 103,
+   "text": "Tomato Leaf Mold: Transmission: Spores are easily spread by air currents, splashing water, workers' clothing, and tools.",
+   "search_text": "Tomato Leaf Mold - Causes & Transmission Vectors: Transmission: Spores are easily spread by air currents, splashing water, workers' clothing, and tools. Spores are",
+   "keywords": [
+    "Spores are"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 104,
+   "text": "Tomato Leaf Mold: Upper Leaf Surface: Older leaves show pale greenish-yellow, diffuse spots with indistinct margins.",
+   "search_text": "Tomato Leaf Mold - Symptoms (Early & Advanced Stages): Upper Leaf Surface: Older leaves show pale greenish-yellow, diffuse spots with indistinct margins. Older leaves",
+   "keywords": [
+    "Older leaves"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 105,
+   "text": "Lower Leaf Surface (Diagnostic Sign): Directly beneath the yellow spots on the upper surface, the lower surface develops a dense, velvety mold. This mold starts olive-green and turns grayish-purple to brown as it ages.",
+   "search_text": "Tomato Leaf Mold - Symptoms (Early & Advanced Stages): Lower Leaf Surface (Diagnostic Sign): Directly beneath the yellow spots on the upper surface, the lower surface develops a dense, velvety mold. This mold starts olive-green and turns grayish-purple to brown as it ages. Directly beneath This mold",
+   "keywords": [
+    "Directly beneath",
+    "This mold"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 106,
+   "text": "Tomato Leaf Mold: Progression: Infected leaves eventually turn completely yellow, wither, and drop prematurely. Fruit infections are very rare.",
+   "search_text": "Tomato Leaf Mold - Symptoms (Early & Advanced Stages): Progression: Infected leaves eventually turn completely yellow, wither, and drop prematurely. Fruit infections are very rare. Fruit infections Infected leaves",
+   "keywords": [
+    "Fruit infections",
+    "Infected leaves"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 107,
+   "text": "Humidity Control (Crucial): In high tunnels or greenhouses, maximize ventilation (roll up sides, use fans, vent roofs) and heat the air to drop relative humidity below 85%.",
+   "search_text": "Tomato Leaf Mold - Prevention & Cultural Practices: Humidity Control (Crucial): In high tunnels or greenhouses, maximize ventilation (roll up sides, use fans, vent roofs) and heat the air to drop relative humidity below 85%.",
+   "keywords": [],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 108,
+   "text": "Tomato Leaf Mold: Spacing & Pruning: Increase plant spacing and aggressively prune lower leaves to ensure excellent airflow through the plant canopy.",
+   "search_text": "Tomato Leaf Mold - Prevention & Cultural Practices: Spacing & Pruning: Increase plant spacing and aggressively prune lower leaves to ensure excellent airflow through the plant canopy. Increase plant",
+   "keywords": [
+    "Increase plant"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 109,
+   "text": "Resistant Varieties: Many greenhouse-specific tomato varieties are bred with resistance to Leaf Mold, though the fungus frequently mutates to overcome these genes.",
+   "search_text": "Tomato Leaf Mold - Prevention & Cultural Practices: Resistant Varieties: Many greenhouse-specific tomato varieties are bred with resistance to Leaf Mold, though the fungus frequently mutates to overcome these genes. Many greenhouse",
+   "keywords": [
+    "Many greenhouse"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 110,
+   "text": "Environmental Correction: Chemical treatments are largely ineffective if high humidity is not corrected first. Lowering humidity stops the disease progression.",
+   "search_text": "Tomato Leaf Mold - Treatment & Solutions (Chemical & Biological): Environmental Correction: Chemical treatments are largely ineffective if high humidity is not corrected first. Lowering humidity stops the disease progression. Chemical treatments Lowering humidity",
+   "keywords": [
+    "Chemical treatments",
+    "Lowering humidity"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 111,
+   "text": "Fungicides: If environmental control is insufficient, protectant fungicides like Chlorothalonil or Copper, or systemic options like Difenoconazole, can be applied, focusing on covering the undersides of the leaves.",
+   "search_text": "Tomato Leaf Mold - Treatment & Solutions (Chemical & Biological): Fungicides: If environmental control is insufficient, protectant fungicides like Chlorothalonil or Copper, or systemic options like Difenoconazole, can be applied, focusing on covering the undersides of the leaves. chlorothalonil copper difenoconazole",
+   "keywords": [
+    "chlorothalonil",
+    "copper",
+    "difenoconazole"
+   ],
+   "disease": "tomato_leaf_mold",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Leaf_Mold_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 112,
+   "text": "Tomato Septoria Leaf Spot: Common Name: Septoria Leaf Spot",
+   "search_text": "Tomato Septoria Leaf Spot - Disease Name & Target Crop: Common Name: Septoria Leaf Spot",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 113,
+   "text": "Tomato Septoria Leaf Spot: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Septoria Leaf Spot - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 114,
+   "text": "Tomato Septoria Leaf Spot: Septoria lycopersici (Fungus)",
+   "search_text": "Tomato Septoria Leaf Spot - Scientific Name (Pathogen): Septoria lycopersici (Fungus) Septoria lycopersici",
+   "keywords": [
+    "Septoria lycopersici"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 115,
+   "text": "Septoria leaf spot is a very common and destructive foliar disease of tomatoes. While it rarely infects the fruit directly, it can cause rapid and severe defoliation. This loss of canopy exposes the fruit to sunscald and prevents the plant from maturing its crop properly.",
+   "search_text": "Tomato Septoria Leaf Spot - Disease Overview: Septoria leaf spot is a very common and destructive foliar disease of tomatoes. While it rarely infects the fruit directly, it can cause rapid and severe defoliation. This loss of canopy exposes the fruit to sunscald and prevents the plant from maturing its crop properly. Septoria leaf This loss",
+   "keywords": [
+    "Septoria leaf",
+    "This loss"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 116,
+   "text": "Tomato Septoria Leaf Spot: Overwintering: The fungus survives winter in infected tomato debris, on seeds, and on solanaceous weeds (like jimsonweed and nightshade).",
+   "search_text": "Tomato Septoria Leaf Spot - Causes & Transmission Vectors: Overwintering: The fungus survives winter in infected tomato debris, on seeds, and on solanaceous weeds (like jimsonweed and nightshade).",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 117,
+   "text": "Transmission: Spores are splashed by rain or overhead irrigation from the soil onto the lower leaves. It can also be spread by hands, clothing, or tools.",
+   "search_text": "Tomato Septoria Leaf Spot - Causes & Transmission Vectors: Transmission: Spores are splashed by rain or overhead irrigation from the soil onto the lower leaves. It can also be spread by hands, clothing, or tools. Spores are",
+   "keywords": [
+    "Spores are"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 118,
+   "text": "Tomato Septoria Leaf Spot: Environment: Thrives in wet, humid conditions with moderate temperatures (68-77°F / 20-25°C).",
+   "search_text": "Tomato Septoria Leaf Spot - Causes & Transmission Vectors: Environment: Thrives in wet, humid conditions with moderate temperatures (68-77°F / 20-25°C).",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 119,
+   "text": "Foliar Lesions: Symptoms usually appear on the older, lower leaves first after the plant begins setting fruit. Lesions are small (1/16 to 1/8 inch), circular spots with dark brown margins and lighter tan or gray centers.",
+   "search_text": "Tomato Septoria Leaf Spot - Symptoms (Early & Advanced Stages): Foliar Lesions: Symptoms usually appear on the older, lower leaves first after the plant begins setting fruit. Lesions are small (1/16 to 1/8 inch), circular spots with dark brown margins and lighter tan or gray centers. Lesions are Symptoms usually",
+   "keywords": [
+    "Lesions are",
+    "Symptoms usually"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 120,
+   "text": "Pycnidia (Fruiting Bodies): A key diagnostic feature is the presence of tiny black specks (pycnidia) in the light-colored center of the spots, visible with a hand lens.",
+   "search_text": "Tomato Septoria Leaf Spot - Symptoms (Early & Advanced Stages): Pycnidia (Fruiting Bodies): A key diagnostic feature is the presence of tiny black specks (pycnidia) in the light-colored center of the spots, visible with a hand lens.",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 121,
+   "text": "Tomato Septoria Leaf Spot: Progression: Heavily infected leaves turn yellow, wither, and eventually fall off. The disease quickly moves up the canopy.",
+   "search_text": "Tomato Septoria Leaf Spot - Symptoms (Early & Advanced Stages): Progression: Heavily infected leaves turn yellow, wither, and eventually fall off. The disease quickly moves up the canopy. Heavily infected",
+   "keywords": [
+    "Heavily infected"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 122,
+   "text": "Sanitation & Rotation: Remove and destroy infected plant debris at the end of the season. Rotate crops, avoiding tomatoes or other solanaceous crops in the same spot for 3 years.",
+   "search_text": "Tomato Septoria Leaf Spot - Prevention & Cultural Practices: Sanitation & Rotation: Remove and destroy infected plant debris at the end of the season. Rotate crops, avoiding tomatoes or other solanaceous crops in the same spot for 3 years. Remove and Rotate crops",
+   "keywords": [
+    "Remove and",
+    "Rotate crops"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 123,
+   "text": "Mulching & Watering: Apply a thick layer of mulch to prevent soilborne spores from splashing onto foliage. Water at the base of the plant using drip irrigation; keep leaves dry.",
+   "search_text": "Tomato Septoria Leaf Spot - Prevention & Cultural Practices: Mulching & Watering: Apply a thick layer of mulch to prevent soilborne spores from splashing onto foliage. Water at the base of the plant using drip irrigation; keep leaves dry.",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 124,
+   "text": "Tomato Septoria Leaf Spot: Airflow: Stake or cage plants and space them adequately to promote rapid drying of foliage.",
+   "search_text": "Tomato Septoria Leaf Spot - Prevention & Cultural Practices: Airflow: Stake or cage plants and space them adequately to promote rapid drying of foliage.",
+   "keywords": [],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 125,
+   "text": "Fungicides: Preventative fungicide applications are highly effective. Protectants like Chlorothalonil, Mancozeb, and Copper fungicides should be applied when conditions favor the disease, or at the first sign of leaf spots.",
+   "search_text": "Tomato Septoria Leaf Spot - Treatment & Solutions (Chemical & Biological): Fungicides: Preventative fungicide applications are highly effective. Protectants like Chlorothalonil, Mancozeb, and Copper fungicides should be applied when conditions favor the disease, or at the first sign of leaf spots. Copper fungicides Preventative fungicide Protectants like chlorothalonil copper mancozeb",
+   "keywords": [
+    "Copper fungicides",
+    "Preventative fungicide",
+    "Protectants like",
+    "chlorothalonil",
+    "copper",
+    "mancozeb"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 126,
+   "text": "Tomato Septoria Leaf Spot: Pruning: Immediately remove and destroy early infected lower leaves to slow the upward spread of spores.",
+   "search_text": "Tomato Septoria Leaf Spot - Treatment & Solutions (Chemical & Biological): Pruning: Immediately remove and destroy early infected lower leaves to slow the upward spread of spores. Immediately remove",
+   "keywords": [
+    "Immediately remove"
+   ],
+   "disease": "tomato_septoria_leaf_spot",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": true,
+   "doc": "Tomato_Septoria_Leaf_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 127,
+   "text": "Tomato Spider Mites: Common Name: Two-Spotted Spider Mite",
+   "search_text": "Tomato Spider Mites - Disease Name & Target Crop: Common Name: Two-Spotted Spider Mite",
+   "keywords": [],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 128,
+   "text": "Tomato Spider Mites: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Spider Mites - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 129,
+   "text": "Tomato Spider Mites: Tetranychus urticae (Arachnid/Pest, not a pathogen)",
+   "search_text": "Tomato Spider Mites - Scientific Name (Pathogen): Tetranychus urticae (Arachnid/Pest, not a pathogen) Tetranychus urticae",
+   "keywords": [
+    "Tetranychus urticae"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 130,
+   "text": "Spider mites are not insects, but tiny eight-legged arachnids that feed by piercing plant cells and sucking out the contents. They are a major pest of tomatoes, capable of multiplying explosively and causing severe damage or plant death, especially during hot, dry weather.",
+   "search_text": "Tomato Spider Mites - Disease Overview: Spider mites are not insects, but tiny eight-legged arachnids that feed by piercing plant cells and sucking out the contents. They are a major pest of tomatoes, capable of multiplying explosively and causing severe damage or plant death, especially during hot, dry weather. Spider mites They are",
+   "keywords": [
+    "Spider mites",
+    "They are"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 131,
+   "text": "Environment (Primary Driver): Spider mite populations explode in hot, dry, dusty conditions. Drought-stressed plants are particularly vulnerable.",
+   "search_text": "Tomato Spider Mites - Causes & Transmission Vectors: Environment (Primary Driver): Spider mite populations explode in hot, dry, dusty conditions. Drought-stressed plants are particularly vulnerable. Spider mite",
+   "keywords": [
+    "Spider mite"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 132,
+   "text": "Transmission: Mites are easily carried on the wind (via silk threads), on clothing, tools, or by pets and wildlife moving through the garden.",
+   "search_text": "Tomato Spider Mites - Causes & Transmission Vectors: Transmission: Mites are easily carried on the wind (via silk threads), on clothing, tools, or by pets and wildlife moving through the garden. Mites are",
+   "keywords": [
+    "Mites are"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 133,
+   "text": "Tomato Spider Mites: Overwintering: Females overwinter in soil debris, bark crevices, or on perennial weeds.",
+   "search_text": "Tomato Spider Mites - Causes & Transmission Vectors: Overwintering: Females overwinter in soil debris, bark crevices, or on perennial weeds. Females overwinter",
+   "keywords": [
+    "Females overwinter"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 134,
+   "text": "Tomato Spider Mites: Stippling: Initial feeding causes tiny yellow or white speckles (stippling) on the upper surface of the leaves.",
+   "search_text": "Tomato Spider Mites - Symptoms (Early & Advanced Stages): Stippling: Initial feeding causes tiny yellow or white speckles (stippling) on the upper surface of the leaves. Initial feeding",
+   "keywords": [
+    "Initial feeding"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 135,
+   "text": "Tomato Spider Mites: Webbing: As populations grow, fine, silk-like webbing becomes visible on the undersides of leaves and at the junction of leaf stems.",
+   "search_text": "Tomato Spider Mites - Symptoms (Early & Advanced Stages): Webbing: As populations grow, fine, silk-like webbing becomes visible on the undersides of leaves and at the junction of leaf stems.",
+   "keywords": [],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 136,
+   "text": "Tomato Spider Mites: Advanced Damage: Leaves eventually turn bronze, yellow, or gray, become dry and brittle, and fall off. Plant growth is severely stunted.",
+   "search_text": "Tomato Spider Mites - Symptoms (Early & Advanced Stages): Advanced Damage: Leaves eventually turn bronze, yellow, or gray, become dry and brittle, and fall off. Plant growth is severely stunted. Leaves eventually Plant growth",
+   "keywords": [
+    "Leaves eventually",
+    "Plant growth"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 137,
+   "text": "Moisture Management: Keep plants adequately watered to prevent drought stress. Regularly washing plants with a strong stream of water can physically remove mites and destroy their webbing.",
+   "search_text": "Tomato Spider Mites - Prevention & Cultural Practices: Moisture Management: Keep plants adequately watered to prevent drought stress. Regularly washing plants with a strong stream of water can physically remove mites and destroy their webbing. Keep plants Regularly washing",
+   "keywords": [
+    "Keep plants",
+    "Regularly washing"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 138,
+   "text": "Tomato Spider Mites: Dust Control: Spider mites thrive in dusty conditions. Keep pathways watered down or mulched.",
+   "search_text": "Tomato Spider Mites - Prevention & Cultural Practices: Dust Control: Spider mites thrive in dusty conditions. Keep pathways watered down or mulched. Keep pathways Spider mites",
+   "keywords": [
+    "Keep pathways",
+    "Spider mites"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 139,
+   "text": "Tomato Spider Mites: Weed Control: Eliminate broadleaf weeds around the garden that can harbor mite populations.",
+   "search_text": "Tomato Spider Mites - Prevention & Cultural Practices: Weed Control: Eliminate broadleaf weeds around the garden that can harbor mite populations. Eliminate broadleaf",
+   "keywords": [
+    "Eliminate broadleaf"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 140,
+   "text": "Tomato Spider Mites: Biological Control: Introduce predatory mites, such as Phytoseiulus persimilis, which actively hunt and consume spider mites.",
+   "search_text": "Tomato Spider Mites - Treatment & Solutions (Chemical & Biological): Biological Control: Introduce predatory mites, such as Phytoseiulus persimilis, which actively hunt and consume spider mites. Introduce predatory Phytoseiulus persimilis phytoseiulus",
+   "keywords": [
+    "Introduce predatory",
+    "Phytoseiulus persimilis",
+    "phytoseiulus"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": true,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 141,
+   "text": "Horticultural Oils & Soaps: Neem oil, horticultural oils, and insecticidal soaps are effective but must thoroughly coat the undersides of the leaves to smother the mites. Do not apply oils in extreme heat (above 90°F) to avoid leaf burn.",
+   "search_text": "Tomato Spider Mites - Treatment & Solutions (Chemical & Biological): Horticultural Oils & Soaps: Neem oil, horticultural oils, and insecticidal soaps are effective but must thoroughly coat the undersides of the leaves to smother the mites. Do not apply oils in extreme heat (above 90°F) to avoid leaf burn. Neem oil neem",
+   "keywords": [
+    "Neem oil",
+    "neem"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 142,
+   "text": "Miticides: Chemical miticides (acaricides) can be used for severe infestations, but mites rapidly develop resistance, so modes of action must be rotated.",
+   "search_text": "Tomato Spider Mites - Treatment & Solutions (Chemical & Biological): Miticides: Chemical miticides (acaricides) can be used for severe infestations, but mites rapidly develop resistance, so modes of action must be rotated. Chemical miticides",
+   "keywords": [
+    "Chemical miticides"
+   ],
+   "disease": "tomato_spider_mites",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Spider_Mites_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 143,
+   "text": "Tomato Target Spot: Common Name: Target Spot",
+   "search_text": "Tomato Target Spot - Disease Name & Target Crop: Common Name: Target Spot",
+   "keywords": [],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 144,
+   "text": "Tomato Target Spot: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Target Spot - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 145,
+   "text": "Tomato Target Spot: Corynespora cassiicola (Fungus)",
+   "search_text": "Tomato Target Spot - Scientific Name (Pathogen): Corynespora cassiicola (Fungus) Corynespora cassiicola",
+   "keywords": [
+    "Corynespora cassiicola"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 146,
+   "text": "Target spot is a fungal disease that affects all above-ground parts of the tomato plant, including leaves, stems, and fruit. It is particularly problematic in tropical and subtropical regions, or in high-humidity greenhouse environments. It can cause significant defoliation and direct fruit loss.",
+   "search_text": "Tomato Target Spot - Disease Overview: Target spot is a fungal disease that affects all above-ground parts of the tomato plant, including leaves, stems, and fruit. It is particularly problematic in tropical and subtropical regions, or in high-humidity greenhouse environments. It can cause significant defoliation and direct fruit loss. Target spot",
+   "keywords": [
+    "Target spot"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 147,
+   "text": "Overwintering: Survives in crop debris and has a very wide host range, including many weeds and other crops (like cucumber, papaya, and cotton).",
+   "search_text": "Tomato Target Spot - Causes & Transmission Vectors: Overwintering: Survives in crop debris and has a very wide host range, including many weeds and other crops (like cucumber, papaya, and cotton).",
+   "keywords": [],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 148,
+   "text": "Tomato Target Spot: Transmission: Spores (conidia) are spread by wind currents and splashing water.",
+   "search_text": "Tomato Target Spot - Causes & Transmission Vectors: Transmission: Spores (conidia) are spread by wind currents and splashing water.",
+   "keywords": [],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 149,
+   "text": "Tomato Target Spot: Environment: Requires prolonged leaf wetness (over 16 hours) and high relative humidity. Favors warm temperatures (68-82°F / 20-28°C).",
+   "search_text": "Tomato Target Spot - Causes & Transmission Vectors: Environment: Requires prolonged leaf wetness (over 16 hours) and high relative humidity. Favors warm temperatures (68-82°F / 20-28°C). Favors warm Requires prolonged",
+   "keywords": [
+    "Favors warm",
+    "Requires prolonged"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 150,
+   "text": "Foliar Lesions: Begins as small, pinpoint, water-soaked spots on leaves. These enlarge into circular spots with light brown centers and dark margins. As they grow, they often develop faint concentric rings (resembling a target), sometimes with a yellow halo.",
+   "search_text": "Tomato Target Spot - Symptoms (Early & Advanced Stages): Foliar Lesions: Begins as small, pinpoint, water-soaked spots on leaves. These enlarge into circular spots with light brown centers and dark margins. As they grow, they often develop faint concentric rings (resembling a target), sometimes with a yellow halo. These enlarge",
+   "keywords": [
+    "These enlarge"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 151,
+   "text": "Tomato Target Spot: Stem Lesions: Dark brown, elongated lesions form on stems and petioles.",
+   "search_text": "Tomato Target Spot - Symptoms (Early & Advanced Stages): Stem Lesions: Dark brown, elongated lesions form on stems and petioles. Dark brown",
+   "keywords": [
+    "Dark brown"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 152,
+   "text": "Fruit Symptoms: Small, brown, slightly sunken spots develop on green or ripe fruit. As the spots enlarge, they form distinct, sunken target-like rings that eventually lead to deep fruit rot.",
+   "search_text": "Tomato Target Spot - Symptoms (Early & Advanced Stages): Fruit Symptoms: Small, brown, slightly sunken spots develop on green or ripe fruit. As the spots enlarge, they form distinct, sunken target-like rings that eventually lead to deep fruit rot.",
+   "keywords": [],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 153,
+   "text": "Canopy Management: Ensure excellent airflow by properly spacing plants, pruning suckers, and removing lower leaves to reduce humidity within the canopy.",
+   "search_text": "Tomato Target Spot - Prevention & Cultural Practices: Canopy Management: Ensure excellent airflow by properly spacing plants, pruning suckers, and removing lower leaves to reduce humidity within the canopy. Ensure excellent",
+   "keywords": [
+    "Ensure excellent"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 154,
+   "text": "Tomato Target Spot: Water Management: Avoid overhead irrigation; use drip tape. Ensure foliage can dry quickly after morning dew.",
+   "search_text": "Tomato Target Spot - Prevention & Cultural Practices: Water Management: Avoid overhead irrigation; use drip tape. Ensure foliage can dry quickly after morning dew. Avoid overhead Ensure foliage",
+   "keywords": [
+    "Avoid overhead",
+    "Ensure foliage"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 155,
+   "text": "Tomato Target Spot: Sanitation: Remove and destroy all plant debris post-harvest and maintain strict weed control around the growing area.",
+   "search_text": "Tomato Target Spot - Prevention & Cultural Practices: Sanitation: Remove and destroy all plant debris post-harvest and maintain strict weed control around the growing area. Remove and",
+   "keywords": [
+    "Remove and"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 156,
+   "text": "Fungicides: Preventative spray programs are necessary in high-pressure areas. Protectants like Chlorothalonil and Mancozeb are standard. Systemic fungicides (like azoxystrobin or difenoconazole) are effective but must be rotated to prevent the fungus from developing resistance.",
+   "search_text": "Tomato Target Spot - Treatment & Solutions (Chemical & Biological): Fungicides: Preventative spray programs are necessary in high-pressure areas. Protectants like Chlorothalonil and Mancozeb are standard. Systemic fungicides (like azoxystrobin or difenoconazole) are effective but must be rotated to prevent the fungus from developing resistance. Chlorothalonil and Mancozeb are Preventative spray Protectants like Systemic fungicides azoxystrobin chlorothalonil difenoconazole mancozeb",
+   "keywords": [
+    "Chlorothalonil and",
+    "Mancozeb are",
+    "Preventative spray",
+    "Protectants like",
+    "Systemic fungicides",
+    "azoxystrobin",
+    "chlorothalonil",
+    "difenoconazole",
+    "mancozeb"
+   ],
+   "disease": "tomato_target_spot",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Target_Spot_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 157,
+   "text": "Tomato Yellow Leaf Curl Virus: Common Name: TYLCV",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Disease Name & Target Crop: Common Name: TYLCV",
+   "keywords": [],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 158,
+   "text": "Tomato Yellow Leaf Curl Virus: Target Crop: Tomato (Solanum lycopersicum)",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Disease Name & Target Crop: Target Crop: Tomato (Solanum lycopersicum) Solanum lycopersicum",
+   "keywords": [
+    "Solanum lycopersicum"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "identity",
+   "section_title": "Disease Name & Target Crop",
+   "rescued": true,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 159,
+   "text": "Tomato Yellow Leaf Curl Virus: Tomato yellow leaf curl virus (TYLCV) - A Begomovirus",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Scientific Name (Pathogen): Tomato yellow leaf curl virus (TYLCV) - A Begomovirus Tomato yellow",
+   "keywords": [
+    "Tomato yellow"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "pathogen",
+   "section_title": "Scientific Name (Pathogen)",
+   "rescued": true,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 160,
+   "text": "Tomato yellow leaf curl virus (TYLCV) is one of the most devastating viral diseases of tomatoes worldwide. It causes severe stunting and drastically reduces fruit yield. If plants are infected early in their development, they may produce no marketable fruit at all. There is no cure once a plant is infected.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Disease Overview: Tomato yellow leaf curl virus (TYLCV) is one of the most devastating viral diseases of tomatoes worldwide. It causes severe stunting and drastically reduces fruit yield. If plants are infected early in their development, they may produce no marketable fruit at all. There is no cure once a plant is infected. Tomato yellow",
+   "keywords": [
+    "Tomato yellow"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "overview",
+   "section_title": "Disease Overview",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 161,
+   "text": "Vector Transmission: The virus is transmitted exclusively by the silverleaf whitefly (Bemisia tabaci). When the whitefly feeds on an infected plant, it acquires the virus and can transmit it to healthy plants for the rest of its life.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Causes & Transmission Vectors: Vector Transmission: The virus is transmitted exclusively by the silverleaf whitefly (Bemisia tabaci). When the whitefly feeds on an infected plant, it acquires the virus and can transmit it to healthy plants for the rest of its life. Bemisia tabaci When the",
+   "keywords": [
+    "Bemisia tabaci",
+    "When the"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 162,
+   "text": "Tomato Yellow Leaf Curl Virus: Non-Vectors: TYLCV is not transmitted through seeds, soil, splashing water, or mechanical contact (handling tools or plants).",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Causes & Transmission Vectors: Non-Vectors: TYLCV is not transmitted through seeds, soil, splashing water, or mechanical contact (handling tools or plants).",
+   "keywords": [],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": true,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 163,
+   "text": "Weed Hosts: The virus and the whiteflies can survive in various weed reservoirs (e.g., nightshade, jimsonweed) when tomatoes are not actively growing.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Causes & Transmission Vectors: Weed Hosts: The virus and the whiteflies can survive in various weed reservoirs (e.g., nightshade, jimsonweed) when tomatoes are not actively growing.",
+   "keywords": [],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "transmission",
+   "section_title": "Causes & Transmission Vectors",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 1
+  },
+  {
+   "id": 164,
+   "text": "Stunting: Plants show severe growth stunting, especially if infected when young. The internodes (stem sections between leaves) become very short, resulting in a bushy, compacted appearance.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Symptoms (Early & Advanced Stages): Stunting: Plants show severe growth stunting, especially if infected when young. The internodes (stem sections between leaves) become very short, resulting in a bushy, compacted appearance. Plants show",
+   "keywords": [
+    "Plants show"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 165,
+   "text": "Leaf Symptoms: New leaves are significantly smaller, severely crumpled, and curl strongly upward and inward (cupping). The leaf edges typically show distinct yellowing (chlorosis), while the leaf texture becomes thick and leathery.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Symptoms (Early & Advanced Stages): Leaf Symptoms: New leaves are significantly smaller, severely crumpled, and curl strongly upward and inward (cupping). The leaf edges typically show distinct yellowing (chlorosis), while the leaf texture becomes thick and leathery.",
+   "keywords": [],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 166,
+   "text": "Fruit & Flowers: Infected plants experience heavy flower drop. Any fruit that was already set before infection may ripen normally, but virtually no new fruit is produced.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Symptoms (Early & Advanced Stages): Fruit & Flowers: Infected plants experience heavy flower drop. Any fruit that was already set before infection may ripen normally, but virtually no new fruit is produced. Infected plants",
+   "keywords": [
+    "Infected plants"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "symptom",
+   "section_title": "Symptoms (Early & Advanced Stages)",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 167,
+   "text": "Resistant Varieties: Planting TYLCV-resistant or tolerant tomato hybrids (e.g., 'Tycoon', 'Celebrity Plus') is the most effective management strategy in regions where the virus is endemic.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Prevention & Cultural Practices: Resistant Varieties: Planting TYLCV-resistant or tolerant tomato hybrids (e.g., 'Tycoon', 'Celebrity Plus') is the most effective management strategy in regions where the virus is endemic.",
+   "keywords": [],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 168,
+   "text": "Whitefly Exclusion: Grow seedlings under fine insect-exclusion netting (50-mesh) to prevent early infection. Use UV-reflective (silver) mulches to disorient and repel whiteflies.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Prevention & Cultural Practices: Whitefly Exclusion: Grow seedlings under fine insect-exclusion netting (50-mesh) to prevent early infection. Use UV-reflective (silver) mulches to disorient and repel whiteflies. Grow seedlings",
+   "keywords": [
+    "Grow seedlings"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 169,
+   "text": "Tomato Yellow Leaf Curl Virus: Sanitation: Eradicate weed hosts around the field and destroy old, infected tomato crops immediately to break the whitefly lifecycle.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Prevention & Cultural Practices: Sanitation: Eradicate weed hosts around the field and destroy old, infected tomato crops immediately to break the whitefly lifecycle. Eradicate weed",
+   "keywords": [
+    "Eradicate weed"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "prevention",
+   "section_title": "Prevention & Cultural Practices",
+   "rescued": true,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 170,
+   "text": "No Viral Cure: Infected plants cannot be cured and should be immediately uprooted and destroyed (bagged or burned) to prevent whiteflies from acquiring and spreading the virus.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Treatment & Solutions (Chemical & Biological): No Viral Cure: Infected plants cannot be cured and should be immediately uprooted and destroyed (bagged or burned) to prevent whiteflies from acquiring and spreading the virus. Infected plants",
+   "keywords": [
+    "Infected plants"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  },
+  {
+   "id": 171,
+   "text": "Vector Management: Control the whitefly population using targeted insecticides (e.g., imidacloprid, spiromesifen), horticultural oils, or insecticidal soaps. Focus treatments on the undersides of leaves where whiteflies congregate and lay eggs.",
+   "search_text": "Tomato Yellow Leaf Curl Virus - Treatment & Solutions (Chemical & Biological): Vector Management: Control the whitefly population using targeted insecticides (e.g., imidacloprid, spiromesifen), horticultural oils, or insecticidal soaps. Focus treatments on the undersides of leaves where whiteflies congregate and lay eggs. Control the Focus treatments imidacloprid spiromesifen",
+   "keywords": [
+    "Control the",
+    "Focus treatments",
+    "imidacloprid",
+    "spiromesifen"
+   ],
+   "disease": "tomato_yellowleaf_curl_virus",
+   "crop": "tomato",
+   "section_type": "treatment",
+   "section_title": "Treatment & Solutions (Chemical & Biological)",
+   "rescued": false,
+   "doc": "Tomato_Yellow_Leaf_Curl_Virus_RAG.pdf",
+   "page": 2
+  }
+ ]
+}

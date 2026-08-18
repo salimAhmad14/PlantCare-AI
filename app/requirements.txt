@@ -1,0 +1,26 @@
+# Web
+Flask>=3.0
+Werkzeug>=3.0
+waitress>=3.0            ; sys_platform == "win32"
+gunicorn>=21.2           ; sys_platform != "win32"
+
+# Model
+torch>=2.0
+torchvision>=0.15
+opencv-python-headless>=4.8
+numpy>=1.24
+pandas>=2.0
+
+# Report export
+reportlab>=4.0
+python-docx>=1.1
+
+# Retrieval
+sentence-transformers>=2.6
+networkx>=3.1
+
+# Optional: Milvus backend. No Windows wheel for milvus-lite - the numpy backend
+# in kb_backends.py covers that case, so this line is deliberately not required.
+pymilvus[milvus_lite]>=2.5.0 ; sys_platform != "win32"
+python-dotenv>=1.0
+requests>=2.31

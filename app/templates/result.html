@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% block title %}{{ r.title }} — PlantCare{% endblock %}
+
+{% block content %}
+
+<section class="verdict">
+  <p class="eyebrow">{{ r.crop }} · {{ r.filename }}</p>
+  <h1>{{ r.disease }}</h1>
+  <p class="verdict-meta">
+    <span class="figure">{{ r.confidence_pct }}</span> confidence
+    <span class="tier-note">{{ r.confidence_band }} · {{ r.generated_at }}</span>
+  </p>
+</section>
+
+{% if r.low_confidence %}
+<p class="notice" role="alert">
+  Confidence is below the {{ '%.0f'|format(r.confidence_gate * 100) }}% threshold, so no
+  treatment guidance is shown. Other candidates:
+  {% for a in r.alternatives %}{{ a.name }} ({{ a.pct }}){% if not loop.last %}, {% endif %}{% endfor %}.
+</p>
+{% endif %}
+
+<div class="split">
+  <figure class="plate">
+    <img src="{{ r.images.annotated }}" alt="Uploaded leaf with lesion areas shaded red">
+
+    <ol class="stages">
+      {% if r.images.original %}<li><img src="{{ r.images.original }}" alt=""></li>{% endif %}
+      {% if r.images.leaf_mask %}<li><img src="{{ r.images.leaf_mask }}" alt=""></li>{% endif %}
+      {% if r.images.lesion_mask %}<li><img src="{{ r.images.lesion_mask }}" alt=""></li>{% endif %}
+    </ol>
+  </figure>
+
+  <section class="readout">
+    <h2 class="readout-band">{{ r.severity_level }}</h2>
+
+    {% if r.severity_level in ["Healthy", "Mild", "Moderate", "High"] %}
+    <ol class="scale" aria-label="Severity scale">
+      {% for name in ["Healthy", "Mild", "Moderate", "High"] %}
+      <li class="scale-step{% if name == r.severity_level %} is-current{% endif %}"
+          data-band="{{ name|lower }}">{{ name }}</li>
+      {% endfor %}
+    </ol>
+    {% endif %}
+
+    <p class="readout-advice">{{ r.severity_advice }}</p>
+
+    <dl class="measures">
+      <div><dt>Lesion area</dt>
+        <dd>{% if r.severity_percent is not none %}{{ r.severity_display }} of leaf{% else %}not measured{% endif %}</dd></div>
+      <div><dt>Lesion patches</dt><dd>{{ r.lesion_count }}</dd></div>
+      {% if r.largest_lesion_pct is not none %}
+      <div><dt>Largest patch</dt><dd>{{ '%.1f'|format(r.largest_lesion_pct) }}% of leaf</dd></div>
+      {% endif %}
+    </dl>
+
+    {% if r.alternatives %}
+    <details class="alternates">
+      <summary>Other candidates</summary>
+      <ol>
+        {% for a in r.alternatives %}
+        <li><span>{{ a.name }}</span><span class="figure">{{ a.pct }}</span></li>
+        {% endfor %}
+      </ol>
+    </details>
+    {% endif %}
+  </section>
+</div>
+
+
+{% if r.plan %}
+<details class="plan" open>
+  <summary class="plan-toggle">
+    <span class="plan-toggle-label">What to do now</span>
+    <span class="plan-urgency" data-band="{{ r.severity_level|lower }}">{{ r.plan.urgency }}</span>
+  </summary>
+
+  <p class="plan-lead">{{ r.plan.urgency_note }}</p>
+
+  {% for group in r.plan.groups %}
+  <div class="plan-group">
+    <h3>{{ group.when }}</h3>
+    <ol class="plan-steps">
+      {% for step in group.steps %}
+      <li>
+        {% if step.label %}<strong>{{ step.label }}</strong> — {% endif %}{{ step.text }}
+        {% if step.citation %}<span class="plan-cite">{{ step.citation }}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+  {% endfor %}
+
+  {% for c in r.plan.closing %}
+  <p class="plan-closing">{{ c }}</p>
+  {% endfor %}
+</details>
+{% endif %}
+
+{% if r.advisory and r.advisory.ok %}
+<section class="advisory">
+  <div class="advisory-head">
+    <h2>Field advisory</h2>
+    <span class="advisory-badge">from the cited passages &middot; {{ r.advisory.model }}</span>
+  </div>
+  {% for sec in r.advisory.sections %}
+  <div class="advisory-part">
+    <h3>{{ sec.heading }}</h3>
+    {% if sec.body %}<p>{{ sec.body }}</p>{% endif %}
+    {% if sec.bullets %}
+    <ul>{% for b in sec.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+    {% endif %}
+  </div>
+  {% endfor %}
+  <details class="advisory-sources">
+    <summary>Which source is which</summary>
+    <ol>{% for s in r.advisory.sources %}<li>{{ s.citation }}</li>{% endfor %}</ol>
+  </details>
+</section>
+{% elif r.advisory and not r.advisory.ok %}
+<p class="advisory-fallback">
+  A written summary was not produced for this report
+  {%- if r.advisory.problems %} because the automatic check rejected it
+  ({{ r.advisory.problems|join('; ') }}){% elif r.advisory.reason %}
+  ({{ r.advisory.reason }}){% endif %}.
+  The verified passages below are unaffected.
+</p>
+{% endif %}
+
+{% if report_id %}
+<nav class="exports" aria-label="Download this report">
+  <span class="exports-label">Save this report</span>
+  <a class="button" href="{{ url_for('download', rid=report_id, ext='pdf') }}">PDF</a>
+  <a class="button button-quiet" href="{{ url_for('download', rid=report_id, ext='docx') }}">Word</a>
+  <a class="button button-quiet" href="{{ url_for('download', rid=report_id, ext='txt') }}">Plain text</a>
+</nav>
+{% endif %}
+
+{# The cited passages are the evidence behind the advisory above. They are shown
+   only when no written advisory was produced - with no API key, or when the
+   audit rejected the draft - so the report is never left empty. #}
+{% if not (r.advisory and r.advisory.ok) %}
+{% for key in ['summary', 'symptoms', 'cause', 'reason', 'precaution', 'prevention'] %}
+  {% set sec = r.sections.get(key) %}
+  {% if sec %}
+  <section class="finding">
+    <h2>{{ sec.heading }}</h2>
+    {% if sec.note %}<p class="finding-note">{{ sec.note }}</p>{% endif %}
+    {% for p in sec.passages %}
+    <p>{{ p.text }}</p>
+    {% endfor %}
+    {% if sec.passages %}
+    <p class="cites">
+      {% for p in sec.passages %}<span>{{ p.citation }}</span>{% endfor %}
+    </p>
+    {% endif %}
+  </section>
+  {% endif %}
+{% endfor %}
+{% endif %}
+
+{% if r.caveats %}
+<section class="caveats">
+  <h2>Read this before you act</h2>
+  {% for c in r.caveats %}<p>{{ c }}</p>{% endfor %}
+</section>
+{% endif %}
+
+<p class="again">
+  <a class="button" href="{{ url_for('index') }}">Diagnose another leaf</a>
+  {% if report_id %}
+  <a class="button button-quiet" href="{{ url_for('download', rid=report_id, ext='pdf') }}">Download PDF</a>
+  {% endif %}
+</p>
+{% endblock %}
