@@ -4,6 +4,19 @@ An end-to-end plant leaf disease diagnosis system for **grape and tomato** crops
 
 Built as a Postgraduate Certificate project at C-DAC Noida.
 
+
+![Upload page](docs/upload-page.png)
+
+*Upload one leaf photo.*
+
+![Diagnosis report](docs/report-page.png)
+
+*Grape Isariopsis Leaf Spot detected at 96% confidence. The overlay shows nine
+detected lesion patches covering 15.7% of the leaf area, alongside the extracted
+leaf mask and lesion mask. Every treatment step cites the exact source document
+and page it came from.*
+
+
 ---
 
 ## What it does
