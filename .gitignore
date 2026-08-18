@@ -50,3 +50,5 @@ data/
 # --- misc ---
 .DS_Store
 *.log
+app/artifacts/plantcare.db/
+!app/artifacts/best_cnn.pt
