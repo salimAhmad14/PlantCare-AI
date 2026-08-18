@@ -4,10 +4,9 @@ An end-to-end plant leaf disease diagnosis system for **grape and tomato** crops
 
 Built as a Postgraduate Certificate project at C-DAC Noida.
 
-
 ![Upload page](docs/upload-page.png)
 
-
+*Single-page upload. One leaf, filling the frame, on a plain background.*
 
 ![Diagnosis report](docs/report-page.png)
 
@@ -15,7 +14,6 @@ Built as a Postgraduate Certificate project at C-DAC Noida.
 detected lesion patches covering 15.7% of the leaf area, alongside the extracted
 leaf mask and lesion mask. Every treatment step cites the exact source document
 and page it came from.*
-
 
 ---
 
@@ -133,6 +131,8 @@ notebook/
   Notebook 01        classification pipeline
   Notebook 02        knowledge base construction
   Notebook 03        image-to-advisory pipeline
+docs/                screenshots
+requirements.txt
 ```
 
 ---
@@ -160,6 +160,10 @@ python app.py
 
 Open `http://localhost:5000`. Check `http://localhost:5000/health` to confirm the model, knowledge base and class index all agree with each other.
 
+Everything needed to run the app is already in this repository — the trained checkpoint, class index, OOD statistics and the retrieval knowledge base. The dataset is only needed if you want to retrain.
+
+Without a `GROQ_API_KEY` the app still runs. It falls back to the extractive report, where every line is quoted verbatim from a retrieved passage.
+
 ### Environment variables
 
 | Variable | Purpose |
@@ -170,6 +174,46 @@ Open `http://localhost:5000`. Check `http://localhost:5000/health` to confirm th
 | `PLANTCARE_CORS_ORIGIN` | allowed origin for the JSON API |
 
 `.env` is gitignored. Never commit it.
+
+The Milvus Lite database is not committed — it rebuilds from `app/artifacts/kb_chunks.json` in seconds if you switch to the `milvus` backend. The default NumPy backend needs nothing extra.
+
+---
+
+## Dataset
+
+**Tomato & Grape Crop Dataset** — 28,843 images across 13 classes (4 grape, 9 tomato).
+
+Not committed to this repository due to size. Download it separately and place it like this:
+
+```
+data/
+  CROP_Dataset/
+    Grape/
+      grape_black_measles/
+      grape_black_rot/
+      grape_healthy/
+      grape_isariopsis_leaf_spot/
+    Tomato/
+      tomato_bacterial_spot/
+      tomato_early_blight/
+      ...
+```
+
+The notebooks read from this path — update the dataset path constant at the top of Notebook 01 if you put it elsewhere.
+
+---
+
+## Notebooks
+
+The three notebooks in `notebook/` were developed on Kaggle.
+
+| Notebook | What it produces |
+|---|---|
+| **01 — Classification** | Trains EfficientNet-B0, runs the leakage audit, fits the OOD Gaussian, exports the checkpoint and `artifacts/` |
+| **02 — Knowledge base** | Parses the 11 disease documents into 172 chunks, builds dense + BM25 representations, exports `kb_export/` |
+| **03 — Image to advisory** | Joins the two: image in, cited advisory out. Imports `severity.py` and `preprocessing.py` from Notebook 01 rather than reimplementing them, so thresholds cannot drift between the two |
+
+Notebooks 02 and 03 need a `GROQ_API_KEY` stored as a Kaggle Secret.
 
 ---
 
@@ -191,6 +235,7 @@ Worth reading before you trust a number from this repo.
 - Grad-CAM explanation overlays
 - Field-photo dataset collection and retraining
 - Severity calibration against expert-labelled samples
+- Stratified refit of the OOD statistics and a tighter rejection threshold
 - More crops beyond grape and tomato
 - Mobile-friendly capture flow
 
