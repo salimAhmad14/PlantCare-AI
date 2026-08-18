@@ -7,7 +7,7 @@ Built as a Postgraduate Certificate project at C-DAC Noida.
 
 ![Upload page](docs/upload-page.png)
 
-*Upload one leaf photo.*
+
 
 ![Diagnosis report](docs/report-page.png)
 
